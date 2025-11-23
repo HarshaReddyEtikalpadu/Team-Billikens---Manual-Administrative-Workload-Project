@@ -1,4 +1,4 @@
-<!doctype html>
+   <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -26,51 +26,431 @@
     </div>
   </header>
 
-  <main class="container">
-    <h1>Problem Context & Stakeholders</h1>
-    <section class="card">
-      <h2>Problem Statement</h2>
-      <p>Silverleaf University lacked visibility into administrative workload distribution, processing times, and bottlenecks while processing over 2,600 requests between Jan 2024 and Dec 2025. This led to uneven staffing, long processing times, rework, and a poor service experience.</p>
-    </section>
-
-    <section class="card">
-      <h2>Key Statistics</h2>
-      <ul>
-        <li><strong>2,600+</strong> requests processed (Jan 2024 - Dec 2025)</li>
-        <li><strong>7 departments</strong>: Registrar (30%), Finance (25%), Academic Affairs (20%), IT Support (15%), Student Services (10%), International Office, Others</li>
-        <li><strong>Average processing time</strong>: 76 minutes (target: 45–48 minutes)</li>
-        <li><strong>Error rate</strong>: ~50% (target &lt;15%)</li>
-        <li><strong>Peak hours</strong>: 9–11 AM, Monday–Thursday</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Stakeholder Pain Points</h2>
-      <ul>
-        <li><strong>Department Administrators:</strong> Overloaded workflows and unclear priorities.</li>
-        <li><strong>Department Managers:</strong> Limited performance visibility to optimize staffing.</li>
-        <li><strong>Senior Management:</strong> No consolidated data for budgeting and capacity planning.</li>
-        <li><strong>Students:</strong> Indirect impact: delayed services and poor communication.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Impact</h2>
-      <p>Operational delays, increased costs, and lowered student satisfaction. Without analytics, targeted interventions (automation, process redesign, or staffing adjustments) are difficult to justify and implement.</p>
-    </section>
-
-    <nav class="pager">
-      <a class="btn" href="index.html">Previous</a>
-      <a class="btn primary" href="research.html">Next</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Administrative Workload Analytics</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problem.html" class="active">Problem</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="solution.html">Solution</a></li>
+          <li><a href="charter.html">Charter</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="ethics.html">Ethics</a></li>
+          <li><a href="lessons.html">Lessons</a></li>
+        </ul>
+      </div>
     </nav>
-  </main>
+    <!-- Hero Section -->
+    <section class="problem-hero">
+      <div class="container">
+        <h1>Problem Context & Stakeholders</h1>
+        <p class="hero-subtitle">Understanding the administrative inefficiencies at Silverleaf University</p>
+      </div>
+    </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© Silverleaf University — Team 16</p>
-    </div>
-  </footer>
+    <!-- Problem Statement Section -->
+    <section class="problem-statement-section">
+      <div class="container">
+        <div class="problem-card-large">
+          <div class="problem-icon">⚠️</div>
+          <h2>The Problem</h2>
+          <p class="problem-description">
+            Silverleaf University lacked visibility into administrative workload distribution, processing times, 
+            and bottlenecks while processing over 2,600 requests between January 2024 and December 2025 across 
+            seven departments. This led to uneven staffing, long processing times, excessive rework, and a 
+            deteriorating service experience for students and staff alike.
+          </p>
+          <p class="problem-impact">
+            Without centralized data visibility, administrators and department leaders had no detailed insights 
+            into where time was wasted, which activities were delaying operations, or how workload varied across 
+            months, days, and hours. Decisions on staffing, resource planning, and automation were made largely 
+            without evidence, relying on intuition rather than data.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <script src="js/main.js"></script>
-</body>
-</html>
+    <!-- Key Statistics Section -->
+    <section class="statistics-showcase">
+      <div class="container">
+        <h2 class="section-title">Key Statistics & Challenges</h2>
+        <p class="section-intro">Data from January 2024 to December 2025 reveals significant operational inefficiencies</p>
+            
+        <div class="stats-grid-large">
+          <div class="stat-card stat-primary">
+            <div class="stat-icon">📋</div>
+            <div class="stat-value">2,600+</div>
+            <div class="stat-label">Administrative Requests</div>
+            <div class="stat-detail">Processed across 7 departments (Jan 2024 - Dec 2025)</div>
+          </div>
+
+          <div class="stat-card stat-danger">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-value">48.2 min</div>
+            <div class="stat-label">Average Processing Time</div>
+            <div class="stat-detail">Target: 45 minutes | Document Verification: 76 minutes</div>
+            <div class="stat-badge danger">7% over target</div>
+          </div>
+
+          <div class="stat-card stat-warning">
+            <div class="stat-icon">❌</div>
+            <div class="stat-value">~53.6%</div>
+            <div class="stat-label">Error/Rework Rate</div>
+            <div class="stat-detail">Target: <15% | Nearly half of all requests had errors</div>
+            <div class="stat-badge warning">257% over target</div>
+          </div>
+
+          <div class="stat-card stat-info">
+            <div class="stat-icon">🕐</div>
+            <div class="stat-value">9-11 AM</div>
+            <div class="stat-label">Peak Hours</div>
+            <div class="stat-detail">Monday-Thursday | 40-50 active requests per hour</div>
+          </div>
+
+          <div class="stat-card stat-danger">
+            <div class="stat-icon">📦</div>
+            <div class="stat-value">40-50</div>
+            <div class="stat-label">International Office Backlog</div>
+            <div class="stat-detail">Consistently unprocessed requests indicating overload</div>
+          </div>
+
+          <div class="stat-card stat-success">
+            <div class="stat-icon">💰</div>
+            <div class="stat-value">$74,400</div>
+            <div class="stat-label">Annual Savings Potential</div>
+            <div class="stat-detail">From document verification automation alone</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Department Breakdown -->
+    <section class="department-breakdown">
+      <div class="container">
+        <h2 class="section-title">Department Distribution</h2>
+        <p class="section-intro">Request volume varies significantly across university departments</p>
+            
+        <div class="department-grid">
+          <div class="dept-card">
+            <div class="dept-header registrar">
+              <h3>Registrar</h3>
+              <div class="dept-percentage">30%</div>
+            </div>
+            <div class="dept-body">
+              <p class="dept-requests">~780 requests</p>
+              <p class="dept-types">Enrollment, transcripts, course changes</p>
+            </div>
+          </div>
+
+          <div class="dept-card">
+            <div class="dept-header finance">
+              <h3>Finance</h3>
+              <div class="dept-percentage">25%</div>
+            </div>
+            <div class="dept-body">
+              <p class="dept-requests">~650 requests</p>
+              <p class="dept-types">Fee clarification, payment plans, refunds</p>
+            </div>
+          </div>
+
+          <div class="dept-card">
+            <div class="dept-header academic">
+              <h3>Academic Affairs</h3>
+              <div class="dept-percentage">20%</div>
+            </div>
+            <div class="dept-body">
+              <p class="dept-requests">~520 requests</p>
+              <p class="dept-types">Academic petitions, grade appeals</p>
+            </div>
+          </div>
+
+          <div class="dept-card">
+            <div class="dept-header it">
+              <h3>IT Support</h3>
+              <div class="dept-percentage">15%</div>
+            </div>
+            <div class="dept-body">
+              <p class="dept-requests">~390 requests</p>
+              <p class="dept-types">System access, technical issues</p>
+            </div>
+          </div>
+
+          <div class="dept-card">
+            <div class="dept-header student">
+              <h3>Student Services</h3>
+              <div class="dept-percentage">10%</div>
+            </div>
+            <div class="dept-body">
+              <p class="dept-requests">~260 requests</p>
+              <p class="dept-types">Housing, ID cards, parking permits</p>
+            </div>
+          </div>
+
+          <div class="dept-card highlight-card">
+            <div class="dept-header international">
+              <h3>International Office</h3>
+              <div class="dept-percentage">Others</div>
+            </div>
+            <div class="dept-body">
+              <p class="dept-requests">Variable volume</p>
+              <p class="dept-types">Visa support, work authorization</p>
+              <div class="alert-badge">⚠️ Consistent 40-50 pending backlog</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Critical Issues Section -->
+    <section class="critical-issues">
+      <div class="container">
+        <h2 class="section-title">Critical Operational Issues</h2>
+            
+        <div class="issues-grid">
+          <div class="issue-card issue-red">
+            <div class="issue-number">1</div>
+            <h3>Document Verification Bottleneck</h3>
+            <div class="issue-stats">
+              <span class="issue-stat-item">Current: 76 minutes</span>
+              <span class="issue-stat-item">Target: 48 minutes</span>
+              <span class="issue-stat-item">Variance: +58%</span>
+            </div>
+            <p>The longest-running workflow, significantly exceeding targets and creating cascading delays across dependent processes.</p>
+          </div>
+
+          <div class="issue-card issue-orange">
+            <div class="issue-number">2</div>
+            <h3>Peak Hour Congestion</h3>
+            <div class="issue-stats">
+              <span class="issue-stat-item">Time: 9:00-11:00 AM</span>
+              <span class="issue-stat-item">Days: Mon-Thu</span>
+              <span class="issue-stat-item">Volume: 40-50 requests/hour</span>
+            </div>
+            <p>Departments experience overwhelming workload during morning hours with occupancy rates exceeding 95%, leading to queue accumulation.</p>
+          </div>
+
+          <div class="issue-card issue-purple">
+            <div class="issue-number">3</div>
+            <h3>Excessive Error Rates</h3>
+            <div class="issue-stats">
+              <span class="issue-stat-item">Current: ~53.6%</span>
+              <span class="issue-stat-item">Target: <15%</span>
+              <span class="issue-stat-item">Gap: 257% over</span>
+            </div>
+            <p>More than half of all requests included at least one error or rework reminder, dramatically slowing processing and reducing service quality.</p>
+          </div>
+
+          <div class="issue-card issue-blue">
+            <div class="issue-number">4</div>
+            <h3>Persistent Backlogs</h3>
+            <div class="issue-stats">
+              <span class="issue-stat-item">Int'l Office: 40-50 pending</span>
+              <span class="issue-stat-item">Frequency: Consistent</span>
+              <span class="issue-stat-item">Status: Unresolved</span>
+            </div>
+            <p>The International Office regularly maintains 40-50 unprocessed requests, indicating continuous operational overload and insufficient resources.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stakeholder Pain Points -->
+    <section class="stakeholders-section">
+      <div class="container">
+        <h2 class="section-title">Stakeholder Perspectives</h2>
+        <p class="section-intro">Each stakeholder group experiences unique challenges due to operational inefficiencies</p>
+            
+        <div class="stakeholder-cards">
+          <div class="stakeholder-card">
+            <div class="stakeholder-avatar">👥</div>
+            <h3>Department Administrators</h3>
+            <p class="stakeholder-role">Front-line Staff | Direct Request Handlers</p>
+            <div class="pain-points">
+              <h4>Pain Points:</h4>
+              <ul>
+                <li><span class="pain-icon">😓</span> Large volume of manual, repetitive work</li>
+                <li><span class="pain-icon">🤷</span> Poor visibility into daily priorities</li>
+                <li><span class="pain-icon">⏰</span> Extreme stress during peak hours (9-11 AM)</li>
+                <li><span class="pain-icon">🔄</span> High rework burden due to errors (~53.6%)</li>
+                <li><span class="pain-icon">📉</span> No feedback on personal performance metrics</li>
+              </ul>
+            </div>
+            <div class="stakeholder-impact">
+              <strong>Impact:</strong> Burnout, decreased job satisfaction, high turnover risk
+            </div>
+          </div>
+
+          <div class="stakeholder-card">
+            <div class="stakeholder-avatar">👔</div>
+            <h3>Department Managers</h3>
+            <p class="stakeholder-role">Team Leaders | Resource Allocators</p>
+            <div class="pain-points">
+              <h4>Pain Points:</h4>
+              <ul>
+                <li><span class="pain-icon">❓</span> Cannot identify overloaded team members</li>
+                <li><span class="pain-icon">⏱️</span> No data on which tasks take longest</li>
+                <li><span class="pain-icon">🐛</span> Unclear where accuracy problems occur</li>
+                <li><span class="pain-icon">⚖️</span> Difficulty distributing workload fairly</li>
+                <li><span class="pain-icon">📊</span> Lack of metrics for performance reviews</li>
+              </ul>
+            </div>
+            <div class="stakeholder-impact">
+              <strong>Impact:</strong> Suboptimal staffing decisions, inability to justify resource requests
+            </div>
+          </div>
+
+          <div class="stakeholder-card">
+            <div class="stakeholder-avatar">🎓</div>
+            <h3>Senior Management</h3>
+            <p class="stakeholder-role">Executive Leadership | Budget Decision-Makers</p>
+            <div class="pain-points">
+              <h4>Pain Points:</h4>
+              <ul>
+                <li><span class="pain-icon">💼</span> No aggregate view of administrative costs</li>
+                <li><span class="pain-icon">💰</span> Cannot estimate manual process expenses</li>
+                <li><span class="pain-icon">🤔</span> Unclear ROI for automation investments</li>
+                <li><span class="pain-icon">📈</span> Difficulty forecasting capacity needs</li>
+                <li><span class="pain-icon">🎯</span> No data to support strategic initiatives</li>
+              </ul>
+            </div>
+            <div class="stakeholder-impact">
+              <strong>Impact:</strong> Budget allocated without evidence, missed optimization opportunities
+            </div>
+          </div>
+
+          <div class="stakeholder-card">
+            <div class="stakeholder-avatar">🎒</div>
+            <h3>Students</h3>
+            <p class="stakeholder-role">Indirect Stakeholders | Service Recipients</p>
+            <div class="pain-points">
+              <h4>Pain Points:</h4>
+              <ul>
+                <li><span class="pain-icon">⏳</span> Delayed service responses (avg 48.2 min)</li>
+                <li><span class="pain-icon">🔁</span> Frequent request rejections and rework</li>
+                <li><span class="pain-icon">😤</span> Long wait times during peak hours</li>
+                <li><span class="pain-icon">❌</span> Errors in processed requests (~53.6%)</li>
+                <li><span class="pain-icon">🚫</span> No transparency on request status</li>
+              </ul>
+            </div>
+            <div class="stakeholder-impact">
+              <strong>Impact:</strong> Frustration, academic delays, decreased university satisfaction
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Root Cause Analysis -->
+    <section class="root-cause-section">
+      <div class="container">
+        <h2 class="section-title">Root Cause Analysis</h2>
+        <p class="section-intro">Why do these problems persist?</p>
+            
+        <div class="root-causes">
+          <div class="cause-card">
+            <div class="cause-icon">🚫</div>
+            <h3>No Centralized Data System</h3>
+            <p>Each department operated in silos with no university-wide visibility into workload patterns, processing times, or resource utilization.</p>
+          </div>
+
+          <div class="cause-card">
+            <div class="cause-icon">📉</div>
+            <h3>Absence of Analytics Infrastructure</h3>
+            <p>No tools existed to analyze historical data, identify trends, or generate insights that could inform operational improvements.</p>
+          </div>
+
+          <div class="cause-card">
+            <div class="cause-icon">🤷</div>
+            <h3>Intuition-Based Decision Making</h3>
+            <p>Staffing, resource allocation, and process changes were made based on gut feeling rather than quantitative evidence.</p>
+          </div>
+
+          <div class="cause-card">
+            <div class="cause-icon">⏰</div>
+            <h3>Unknown Peak Demand Patterns</h3>
+            <p>Without data on when requests peaked, departments couldn't proactively schedule staff or prepare for high-volume periods.</p>
+          </div>
+
+          <div class="cause-card">
+            <div class="cause-icon">🔍</div>
+            <h3>Hidden Bottlenecks</h3>
+            <p>Process inefficiencies remained invisible until they became critical problems, with no early warning system in place.</p>
+          </div>
+
+          <div class="cause-card">
+            <div class="cause-icon">💸</div>
+            <h3>Unquantified Automation ROI</h3>
+            <p>Leadership couldn't justify automation investments without clear data on current costs and potential savings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Summary -->
+    <section class="impact-summary">
+      <div class="container">
+        <div class="impact-box">
+          <h2>📊 The Bottom Line</h2>
+          <div class="impact-content">
+            <p class="impact-statement">
+              Without centralized analytics and data visibility, Silverleaf University's administrative 
+              operations suffered from a vicious cycle: <strong>inefficiency bred more inefficiency</strong>.
+            </p>
+                    
+            <div class="impact-highlights">
+              <div class="impact-item">
+                <span class="impact-label">Student Experience:</span>
+                <span class="impact-value">Deteriorating</span>
+              </div>
+              <div class="impact-item">
+                <span class="impact-label">Staff Morale:</span>
+                <span class="impact-value">Low (burnout risk)</span>
+              </div>
+              <div class="impact-item">
+                <span class="impact-label">Operational Costs:</span>
+                <span class="impact-value">Unnecessarily High</span>
+              </div>
+              <div class="impact-item">
+                <span class="impact-label">Decision Quality:</span>
+                <span class="impact-value">Evidence-free</span>
+              </div>
+            </div>
+
+            <p class="impact-conclusion">
+              This problem context created the urgent need for a comprehensive <strong>Administrative 
+              Workload Analytics Dashboard</strong> — a data-driven solution to transform opaque operations 
+              into transparent, optimizable processes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <section class="content-section">
+      <div class="container">
+        <div class="navigation-buttons">
+          <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+          <a href="research.html" class="btn btn-primary">Research & Insights →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Team 16 - Administrative Workload Analytics Dashboard | Silverleaf University</p>
+        <p>
+          <a href="https://github.com/harshareddyetikalpadu/Team-Billikens---Manual-Administrative-Workload-Project" target="_blank" rel="noopener">GitHub Repository</a> | 
+          <a href="https://university-admin-workload-analytics.vercel.app/login" target="_blank" rel="noopener">Live Dashboard</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+  </html>
