@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Architecture and data design for the project." />
+  <title>Architecture — Administrative Workload Analytics</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Administrative Workload Analytics</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="problem.html">Problem</a>
+        <a href="research.html">Research</a>
+        <a href="solution.html">Solution</a>
+        <a href="charter.html">Charter</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="lessons.html">Lessons</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Architecture & Data Design</h1>
+
+    <section class="card">
+      <h2>Three-Tier Architecture</h2>
+      <p>We adopt a three-tier architecture for clarity and modularity:</p>
+      <ul>
+        <li><strong>Presentation Layer:</strong> React frontend (dashboard views, role-based UI).</li>
+        <li><strong>Application / Analytics Layer:</strong> Analytics engine, recommendations, aggregations.</li>
+        <li><strong>Data Layer:</strong> Storage for requests, logs, daily summaries (prototype uses synthetic CSV/JSON).</li>
+      </ul>
+      <!-- Image: Architecture Diagram -->
+    </section>
+
+    <section class="card">
+      <h2>Data Flow</h2>
+      <p>Requests → Workload logging → ETL (Python) → Aggregation (DailySummary) → Dashboard visualizations & recommendations.</p>
+    </section>
+
+    <section class="card">
+      <h2>ERD (Entities & Relationships)</h2>
+      <p>Six core entities described below. (ER diagram placeholder)</p>
+      <ul>
+        <li><strong>Departments</strong> (1:M Admins, 1:M Requests)</li>
+        <li><strong>Admins</strong> (M:1 Departments, 1:M Requests)</li>
+        <li><strong>Requests</strong> (M:1 Departments/Admins/RequestTypes)</li>
+        <li><strong>RequestTypes</strong> (1:M Requests)</li>
+        <li><strong>WorkloadLog</strong> (M:1 Admins, M:1 Requests)</li>
+        <li><strong>DailySummary</strong> (Aggregated from Requests)</li>
+      </ul>
+      <!-- Image: ERD Diagram -->
+    </section>
+
+    <nav class="pager">
+      <a class="btn" href="charter.html">Previous</a>
+      <a class="btn primary" href="dashboard.html">Next</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Silverleaf University — Team 16</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

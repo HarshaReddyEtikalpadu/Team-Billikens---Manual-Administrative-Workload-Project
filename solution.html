@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Proposed solution: Administrative Workload Analytics Dashboard." />
+  <title>Solution — Administrative Workload Analytics</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Administrative Workload Analytics</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="problem.html">Problem</a>
+        <a href="research.html">Research</a>
+        <a href="solution.html">Solution</a>
+        <a href="charter.html">Charter</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="ethics.html">Ethics</a>
+        <a href="lessons.html">Lessons</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Proposed Solution</h1>
+    <section class="card">
+      <h2>Overview</h2>
+      <p>We propose a web-based Administrative Workload Analytics Dashboard that consolidates request-level data, offers role-based views, and delivers visual analytics and AI-driven recommendations to optimize staffing and reduce processing times.</p>
+    </section>
+
+    <section class="card">
+      <h2>Five Functional Components</h2>
+      <ol>
+        <li><strong>Data Collection:</strong> Event-level logs, request metadata, timestamps, and admin assignments.</li>
+        <li><strong>Role-Based Access:</strong> Admin, Manager, Analyst views with privacy safeguards.</li>
+        <li><strong>Analytics Engine:</strong> Aggregations, anomaly detection, peak-hour analysis.</li>
+        <li><strong>Visualization Dashboard:</strong> KPI cards, charts (pie, bar, line), heatmaps.</li>
+        <li><strong>Recommendations Engine:</strong> AI-driven suggestions for routing, staffing, and automation.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Technology Stack & Justification</h2>
+      <ul>
+        <li><strong>Frontend:</strong> React 18, Tailwind CSS, Recharts — modern, component-driven UI and rich charts.</li>
+        <li><strong>Data:</strong> Python (Pandas, Faker, NumPy) for synthetic data generation and ETL.</li>
+        <li><strong>Deployment:</strong> Vercel for fast static hosting and CI/CD integration.</li>
+        <li><strong>Build Tool:</strong> Vite for fast builds and dev experience.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Solution Goals</h2>
+      <ul>
+        <li>Improve processing efficiency (target 30–40% reduction in verification cycles).</li>
+        <li>Reduce International Office backlog by 50%.</li>
+        <li>Optimize peak-hour staffing for 9–11 AM demand.</li>
+        <li>Reduce errors and rework through quality checks and training.</li>
+        <li>Provide managers with actionable, role-based insights.</li>
+      </ul>
+    </section>
+
+    <nav class="pager">
+      <a class="btn" href="research.html">Previous</a>
+      <a class="btn primary" href="charter.html">Next</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Silverleaf University — Team 16</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
