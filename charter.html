@@ -1,95 +1,650 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Project charter for Administrative Workload Analytics Dashboard." />
-  <title>Project Charter — Administrative Workload Analytics</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Charter - Administrative Workload Analytics</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Administrative Workload Analytics</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Administrative Workload Analytics</a>
       <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="problem.html">Problem</a>
-        <a href="research.html">Research</a>
-        <a href="solution.html">Solution</a>
-        <a href="charter.html">Charter</a>
-        <a href="architecture.html">Architecture</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="ethics.html">Ethics</a>
-        <a href="lessons.html">Lessons</a>
-      </nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="charter.html" class="active">Charter</a></li>
+        <li><a href="architecture.html">Architecture</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="ethics.html">Ethics</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <h1>Project Charter</h1>
-
-    <section class="card">
-      <h2>Project Objectives</h2>
-      <ul>
-        <li>Provide real-time visibility into administrative workloads across departments.</li>
-        <li>Reduce document verification times and errors through analytics-driven recommendations.</li>
-        <li>Deliver a presentation-ready dashboard and supporting documentation by Dec 2025.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Scope</h2>
-      <p><strong>Included:</strong> Dashboard UI, synthetic data generation (Jan 2024 - Dec 2025), analytics visualizations, recommendations engine prototype, documentation, and presentation deliverables.</p>
-      <p><strong>Excluded:</strong> Integration with live production systems, student-identifiable real data, full RBAC enforcement beyond prototype.</p>
-    </section>
-
-    <section class="card">
-      <h2>Timeline</h2>
-      <ul>
-        <li>Data period: Jan 2024 - Dec 2025 (synthetic)</li>
-        <li>Project completion and presentation: Dec 2025</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Deliverables</h2>
-      <ul>
-        <li>Interactive dashboard prototype (React + Recharts)</li>
-        <li>Documentation and technical report</li>
-        <li>Presentation materials (slides & demo)</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Team Roles & Responsibilities</h2>
-      <ul>
-        <li><strong>Member 1</strong> — Project Lead & Backend Developer: data ingestion and APIs.</li>
-        <li><strong>Member 2</strong> — Data Engineer: synthetic data pipelines and ETL.</li>
-        <li><strong>Member 3</strong> — Full Stack Developer: integration and deployment.</li>
-        <li><strong>Member 4</strong> — Frontend Developer & UX Designer: UI and accessibility.</li>
-        <li><strong>Member 5</strong> — Data Analyst & Documentation Lead: analytics and reporting.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Success Criteria</h2>
-      <ul>
-        <li>Dashboard accurately shows key KPIs for the synthetic dataset.</li>
-        <li>Presentation-ready site and demo available for the 5-minute presentation.</li>
-        <li>Recommendations show plausible improvements (30–50% where applicable).</li>
-      </ul>
-    </section>
-
-    <nav class="pager">
-      <a class="btn" href="solution.html">Previous</a>
-      <a class="btn primary" href="architecture.html">Next</a>
-    </nav>
-  </main>
-
-  <footer class="site-footer">
+  <!-- Charter Hero Section -->
+  <section class="page-hero">
     <div class="container">
-      <p>© Silverleaf University — Team 16</p>
+      <h1>Project Charter</h1>
+      <p class="hero-subtitle">Formal authorization and scope definition for the Administrative Workload Analytics Dashboard project</p>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="content-section">
+    <div class="container">
+      <div class="charter-header">
+        <h2>📋 Project Information</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Project Name</h4>
+            <p>Administrative Workload Analytics Dashboard</p>
+          </div>
+          <div class="info-card">
+            <h4>Project Code</h4>
+            <p>AWAD-2024-16</p>
+          </div>
+          <div class="info-card">
+            <h4>Start Date</h4>
+            <p>August 2024</p>
+          </div>
+          <div class="info-card">
+            <h4>Completion Date</h4>
+            <p>December 2025</p>
+          </div>
+          <div class="info-card">
+            <h4>Team</h4>
+            <p>Team 16 (5 Members)</p>
+          </div>
+          <div class="info-card">
+            <h4>Sponsor</h4>
+            <p>Silverleaf University Administration</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive Sponsor -->
+      <div class="content-block">
+        <h2>👔 Executive Sponsor & Stakeholders</h2>
+        <div class="stakeholder-section">
+          <div class="sponsor-card">
+            <h3>Project Sponsor</h3>
+            <p><strong>Silverleaf University Senior Administration</strong></p>
+            <p>Responsible for: Budget approval, strategic alignment, resource authorization</p>
+          </div>
+                    
+          <div class="stakeholders-list">
+            <h3>Key Stakeholders</h3>
+            <ul>
+              <li><strong>Department Heads:</strong> Registrar, Finance, Academic Affairs, IT Support, Student Services, International Office</li>
+              <li><strong>Administrative Staff:</strong> Direct users of the dashboard (2,600+ requests handled)</li>
+              <li><strong>University Leadership:</strong> Budget and strategic planning decision-makers</li>
+              <li><strong>Students:</strong> Indirect beneficiaries through improved service quality</li>
+              <li><strong>IT Department:</strong> System integration and technical support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Objectives -->
+      <div class="content-block">
+        <h2>🎯 Project Objectives</h2>
+        <div class="objectives-grid">
+          <div class="objective-card">
+            <div class="objective-number">1</div>
+            <h3>Enhance Operational Visibility</h3>
+            <p>Provide real-time, comprehensive visibility into administrative workload distribution, processing times, and bottlenecks across all seven departments.</p>
+            <p class="success-metric"><strong>Success Metric:</strong> 100% of departments using dashboard within 3 months</p>
+          </div>
+
+          <div class="objective-card">
+            <div class="objective-number">2</div>
+            <h3>Improve Processing Efficiency</h3>
+            <p>Reduce average processing time from 76 minutes to target of 45 minutes through data-driven insights and process optimization.</p>
+            <p class="success-metric"><strong>Success Metric:</strong> 15% reduction in processing time within 6 months</p>
+          </div>
+
+          <div class="objective-card">
+            <div class="objective-number">3</div>
+            <h3>Reduce Error Rates</h3>
+            <p>Decrease error/rework rate from ~50% to below 15% through quality pattern identification and targeted training.</p>
+            <p class="success-metric"><strong>Success Metric:</strong> 25% reduction in error rate within 6 months</p>
+          </div>
+
+          <div class="objective-card">
+            <div class="objective-number">4</div>
+            <h3>Optimize Resource Allocation</h3>
+            <p>Enable evidence-based staffing decisions using peak-hour analysis and workload forecasting to improve resource distribution.</p>
+            <p class="success-metric"><strong>Success Metric:</strong> 90%+ SLA compliance, <50 pending requests monthly</p>
+          </div>
+
+          <div class="objective-card">
+            <div class="objective-number">5</div>
+            <h3>Enable Data-Driven Decisions</h3>
+            <p>Provide leadership with quantitative insights for budget planning, automation investments, and strategic improvements.</p>
+            <p class="success-metric"><strong>Success Metric:</strong> 80%+ stakeholder satisfaction with decision support</p>
+          </div>
+
+          <div class="objective-card">
+            <div class="objective-number">6</div>
+            <h3>Identify Automation Opportunities</h3>
+            <p>Analyze workflow patterns to identify high-impact automation opportunities, starting with document verification ($74,400 annual savings potential).</p>
+            <p class="success-metric"><strong>Success Metric:</strong> 3+ automation initiatives identified and prioritized</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Scope -->
+      <div class="content-block">
+        <h2>📦 Project Scope</h2>
+                
+        <div class="scope-section">
+          <div class="in-scope">
+            <h3>✅ In Scope</h3>
+            <ul>
+              <li>Development of web-based analytics dashboard using React, Tailwind CSS, and Recharts</li>
+              <li>Integration of 2,600+ historical administrative request records (Jan 2024 - Dec 2025)</li>
+              <li>Design and implementation of 6-entity data model (Departments, Admins, Requests, RequestTypes, WorkloadLog, DailySummary)</li>
+              <li>Creation of 8 real-time KPI tracking cards</li>
+              <li>Development of interactive visualizations (pie charts, bar charts, line graphs, heatmaps)</li>
+              <li>Implementation of role-based access control (Admin, Manager, Analyst views)</li>
+              <li>Peak-hour demand analysis and visualization</li>
+              <li>AI-driven recommendation engine for process optimization</li>
+              <li>Team performance analytics and efficiency scoring</li>
+              <li>Cross-department comparison capabilities</li>
+              <li>Deployment on Vercel with secure authentication</li>
+              <li>Comprehensive documentation and user guides</li>
+              <li>Project portfolio website on GitHub Pages</li>
+              <li>Presentation materials and live demonstration</li>
+            </ul>
+          </div>
+
+          <div class="out-scope">
+            <h3>❌ Out of Scope</h3>
+            <ul>
+              <li>Integration with existing university administrative systems (future phase)</li>
+              <li>Real-time data streaming from live systems</li>
+              <li>Mobile native application development (iOS/Android)</li>
+              <li>Predictive analytics using machine learning models</li>
+              <li>Automated workflow execution or process automation</li>
+              <li>Direct database access for administrators</li>
+              <li>Email notification system</li>
+              <li>Chatbot or conversational AI interface</li>
+              <li>Integration with third-party CRM or ERP systems</li>
+              <li>Multi-language support</li>
+              <li>Advanced reporting with custom report builder</li>
+              <li>Historical data beyond January 2024</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deliverables -->
+      <div class="content-block">
+        <h2>📦 Project Deliverables</h2>
+                
+        <div class="deliverables-timeline">
+          <div class="deliverable-item">
+            <div class="deliverable-phase">Phase 1: Planning & Design</div>
+            <ul>
+              <li>✅ Project charter and scope document</li>
+              <li>✅ Stakeholder analysis and requirements gathering</li>
+              <li>✅ Entity Relationship Diagram (ERD)</li>
+              <li>✅ System architecture design (3-tier model)</li>
+              <li>✅ UI/UX wireframes and mockups</li>
+              <li>✅ Data generation strategy and scripts</li>
+            </ul>
+            <p class="timeline"><strong>Timeline:</strong> August - September 2024</p>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-phase">Phase 2: Development</div>
+            <ul>
+              <li>✅ Synthetic dataset (2,600+ records with realistic distributions)</li>
+              <li>✅ React-based dashboard application</li>
+              <li>✅ 8 KPI tracking cards with real-time updates</li>
+              <li>✅ Interactive visualizations (4+ chart types)</li>
+              <li>✅ Peak-hour heatmap component</li>
+              <li>✅ Team performance analytics module</li>
+              <li>✅ AI recommendation engine</li>
+              <li>✅ Role-based access control system</li>
+            </ul>
+            <p class="timeline"><strong>Timeline:</strong> October 2024 - March 2025</p>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-phase">Phase 3: Testing & Refinement</div>
+            <ul>
+              <li>✅ Comprehensive manual testing documentation</li>
+              <li>✅ Bug fixes and performance optimization</li>
+              <li>✅ User acceptance testing results</li>
+              <li>✅ Accessibility compliance verification (WCAG 2.1 AA)</li>
+              <li>✅ Security and privacy audit</li>
+              <li>✅ Mobile responsiveness testing</li>
+            </ul>
+            <p class="timeline"><strong>Timeline:</strong> April - June 2025</p>
+          </div>
+
+          <div class="deliverable-item">
+            <div class="deliverable-phase">Phase 4: Deployment & Documentation</div>
+            <ul>
+              <li>✅ Deployed dashboard on Vercel (production environment)</li>
+              <li>✅ GitHub Pages portfolio website</li>
+              <li>✅ User documentation and training materials</li>
+              <li>✅ Technical documentation (architecture, data model, API)</li>
+              <li>✅ Final project report (10+ sections)</li>
+              <li>✅ Presentation materials and live demo</li>
+              <li>✅ Lessons learned document</li>
+            </ul>
+            <p class="timeline"><strong>Timeline:</strong> July - December 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Roles & Responsibilities -->
+      <div class="content-block">
+        <h2>👥 Team Structure & Responsibilities</h2>
+                
+        <div class="team-roles">
+          <div class="role-card">
+            <h3>Naveen Ettabouina</h3>
+            <p class="role-title">Project Manager</p>
+            <div class="responsibilities">
+              <h4>Core Responsibilities:</h4>
+              <ul>
+                <li>Sprint planning and coordination</li>
+                <li>Daily scrum facilitation</li>
+                <li>Trello board management and task tracking</li>
+                <li>Timeline and deadline monitoring</li>
+                <li>Stakeholder communication</li>
+                <li>Risk identification and mitigation</li>
+                <li>Team meeting organization</li>
+                <li>Progress reporting to sponsor</li>
+              </ul>
+              <p class="time-commitment"><strong>Time Commitment:</strong> 15-20 hours/week</p>
+            </div>
+          </div>
+
+          <div class="role-card">
+            <h3>Harsha Vardhan Reddy Etikalapadu</h3>
+            <p class="role-title">Team Lead & Full Stack Developer</p>
+            <div class="responsibilities">
+              <h4>Core Responsibilities:</h4>
+              <ul>
+                <li>System architecture design and documentation</li>
+                <li>Technical decision-making and technology selection</li>
+                <li>Full-stack development (React frontend + data layer)</li>
+                <li>Data analysis and insight generation</li>
+                <li>Code review and quality assurance</li>
+                <li>Coding standards establishment</li>
+                <li>Performance optimization</li>
+                <li>Team technical mentoring</li>
+              </ul>
+              <p class="time-commitment"><strong>Time Commitment:</strong> 20-25 hours/week</p>
+            </div>
+          </div>
+
+          <div class="role-card">
+            <h3>Ramesh Alakunta</h3>
+            <p class="role-title">Data Analyst & Developer</p>
+            <div class="responsibilities">
+              <h4>Core Responsibilities:</h4>
+              <ul>
+                <li>Data visualization design and implementation</li>
+                <li>Dashboard component development</li>
+                <li>Synthetic data generation (Python/Faker)</li>
+                <li>Bug identification and resolution</li>
+                <li>Pull request creation and management</li>
+                <li>Chart library integration (Recharts)</li>
+                <li>Data validation and quality checks</li>
+                <li>Documentation of data structures</li>
+              </ul>
+              <p class="time-commitment"><strong>Time Commitment:</strong> 15-20 hours/week</p>
+            </div>
+          </div>
+
+          <div class="role-card">
+            <h3>Karthik</h3>
+            <p class="role-title">Data Analyst & Frontend Developer</p>
+            <div class="responsibilities">
+              <h4>Core Responsibilities:</h4>
+              <ul>
+                <li>Analytics feature development</li>
+                <li>UI/UX design and implementation</li>
+                <li>Frontend component styling (Tailwind CSS)</li>
+                <li>Code review and peer feedback</li>
+                <li>Dashboard functionality testing</li>
+                <li>Responsive design implementation</li>
+                <li>User interaction design</li>
+                <li>Accessibility compliance verification</li>
+              </ul>
+              <p class="time-commitment"><strong>Time Commitment:</strong> 15-20 hours/week</p>
+            </div>
+          </div>
+
+          <div class="role-card">
+            <h3>Srikar Reddy</h3>
+            <p class="role-title">Quality Assurance Lead & Data Analyst</p>
+            <div class="responsibilities">
+              <h4>Core Responsibilities:</h4>
+              <ul>
+                <li>Comprehensive manual testing execution</li>
+                <li>Test case design and documentation</li>
+                <li>Bug identification and reporting</li>
+                <li>Data accuracy validation</li>
+                <li>Dashboard reliability testing</li>
+                <li>User acceptance testing coordination</li>
+                <li>Quality metrics tracking</li>
+                <li>Final deployment verification</li>
+              </ul>
+              <p class="time-commitment"><strong>Time Commitment:</strong> 15-20 hours/week</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Criteria -->
+      <div class="content-block">
+        <h2>✅ Success Criteria & KPIs</h2>
+                
+        <div class="success-grid">
+          <div class="success-category">
+            <h3>🎯 System Adoption</h3>
+            <ul>
+              <li>80%+ of administrators login weekly</li>
+              <li>Average session duration: 5+ minutes</li>
+              <li>70%+ feature utilization rate</li>
+              <li>Dashboard accessible 99%+ uptime</li>
+            </ul>
+          </div>
+
+          <div class="success-category">
+            <h3>⚡ Operational Efficiency</h3>
+            <ul>
+              <li>15% reduction in avg processing time (6 months)</li>
+              <li>25% decrease in error/rework rate</li>
+              <li>90%+ SLA compliance</li>
+              <li><50 pending requests at month-end</li>
+            </ul>
+          </div>
+
+          <div class="success-category">
+            <h3>💰 Financial Impact</h3>
+            <ul>
+              <li>$74,400+ annual automation savings identified</li>
+              <li>20% reduction in overtime costs</li>
+              <li>Positive ROI within 12 months</li>
+              <li>Budget variance <5%</li>
+            </ul>
+          </div>
+
+          <div class="success-category">
+            <h3>📊 Decision Quality</h3>
+            <ul>
+              <li>Improved staff-to-workload alignment</li>
+              <li>Data-driven staffing decisions validated</li>
+              <li>Training effectiveness measured</li>
+              <li>80%+ leadership confidence in analytics</li>
+            </ul>
+          </div>
+
+          <div class="success-category">
+            <h3>😊 Stakeholder Satisfaction</h3>
+            <ul>
+              <li>80%+ administrator satisfaction</li>
+              <li>Manager confidence in team optimization</li>
+              <li>Leadership trust in budget decisions</li>
+              <li>Student complaint reduction measurable</li>
+            </ul>
+          </div>
+
+          <div class="success-category">
+            <h3>🛠️ Technical Excellence</h3>
+            <ul>
+              <li>WCAG 2.1 AA accessibility compliance</li>
+              <li>Mobile responsiveness verified</li>
+              <li>Load time <3 seconds</li>
+              <li>Zero critical security vulnerabilities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Budget & Resources -->
+      <div class="content-block">
+        <h2>💵 Budget & Resources</h2>
+                
+        <div class="budget-section">
+          <div class="budget-card">
+            <h3>Project Budget Breakdown</h3>
+            <table class="budget-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Personnel</strong></td>
+                  <td>5 team members × 16 weeks × 20 hrs/week</td>
+                  <td>Primary Investment</td>
+                </tr>
+                <tr>
+                  <td><strong>Software & Tools</strong></td>
+                  <td>GitHub, Vercel (free tier), VS Code</td>
+                  <td>$0</td>
+                </tr>
+                <tr>
+                  <td><strong>Infrastructure</strong></td>
+                  <td>Hosting (Vercel + GitHub Pages)</td>
+                  <td>$0</td>
+                </tr>
+                <tr>
+                  <td><strong>Training</strong></td>
+                  <td>React, Recharts, Tailwind documentation</td>
+                  <td>$0</td>
+                </tr>
+                <tr>
+                  <td><strong>Testing</strong></td>
+                  <td>Manual QA, browser testing</td>
+                  <td>Included</td>
+                </tr>
+                <tr>
+                  <td><strong>Documentation</strong></td>
+                  <td>Google Docs, Markdown</td>
+                  <td>$0</td>
+                </tr>
+                <tr class="budget-total">
+                  <td colspan="2"><strong>Total Budget</strong></td>
+                  <td><strong>Academic Project</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="resources-card">
+            <h3>Required Resources</h3>
+            <ul>
+              <li><strong>Hardware:</strong> Team member personal computers (5)</li>
+              <li><strong>Software:</strong> VS Code, Git, Python, Node.js, modern browsers</li>
+              <li><strong>Cloud Services:</strong> GitHub (version control), Vercel (hosting), GitHub Pages (documentation)</li>
+              <li><strong>Communication:</strong> Slack, Zoom, Trello</li>
+              <li><strong>Documentation:</strong> Google Docs, Google Drive</li>
+              <li><strong>Development:</strong> React 18, Tailwind CSS, Recharts, Vite</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risks & Mitigation -->
+      <div class="content-block">
+        <h2>⚠️ Risks & Mitigation Strategies</h2>
+                
+        <div class="risks-table">
+          <table class="risk-matrix">
+            <thead>
+              <tr>
+                <th>Risk</th>
+                <th>Impact</th>
+                <th>Probability</th>
+                <th>Mitigation Strategy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Scope Creep</strong></td>
+                <td class="impact-high">High</td>
+                <td class="prob-medium">Medium</td>
+                <td>Strict scope management, change control process, regular scope reviews</td>
+              </tr>
+              <tr>
+                <td><strong>Technical Complexity</strong></td>
+                <td class="impact-medium">Medium</td>
+                <td class="prob-medium">Medium</td>
+                <td>Pair programming, code reviews, technical documentation, knowledge sharing</td>
+              </tr>
+              <tr>
+                <td><strong>Data Quality Issues</strong></td>
+                <td class="impact-high">High</td>
+                <td class="prob-low">Low</td>
+                <td>Validation rules, data quality checks, synthetic data testing, peer review</td>
+              </tr>
+              <tr>
+                <td><strong>Team Member Availability</strong></td>
+                <td class="impact-medium">Medium</td>
+                <td class="prob-medium">Medium</td>
+                <td>Cross-training, documentation, backup plans, flexible sprint planning</td>
+              </tr>
+              <tr>
+                <td><strong>Technology Changes</strong></td>
+                <td class="impact-low">Low</td>
+                <td class="prob-low">Low</td>
+                <td>Stable technology choices, version locking, backward compatibility</td>
+              </tr>
+              <tr>
+                <td><strong>Integration Challenges</strong></td>
+                <td class="impact-low">Low</td>
+                <td class="prob-low">Low</td>
+                <td>Out of scope for Phase 1, planned for future phases</td>
+              </tr>
+              <tr>
+                <td><strong>Performance Issues</strong></td>
+                <td class="impact-medium">Medium</td>
+                <td class="prob-low">Low</td>
+                <td>Early performance testing, optimization sprints, code profiling</td>
+              </tr>
+              <tr>
+                <td><strong>User Adoption Resistance</strong></td>
+                <td class="impact-high">High</td>
+                <td class="prob-medium">Medium</td>
+                <td>User training, intuitive design, change management, stakeholder engagement</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Project Timeline -->
+      <div class="content-block">
+        <h2>📅 Project Timeline</h2>
+                
+        <div class="timeline-visual">
+          <div class="timeline-item">
+            <div class="timeline-date">Aug - Sep 2024</div>
+            <div class="timeline-content">
+              <h3>Phase 1: Planning & Design</h3>
+              <p>Requirements gathering, architecture design, ERD creation, UI/UX mockups</p>
+              <span class="timeline-status complete">✓ Complete</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Oct 2024 - Mar 2025</div>
+            <div class="timeline-content">
+              <h3>Phase 2: Development</h3>
+              <p>Dashboard development, data generation, visualizations, role-based access</p>
+              <span class="timeline-status complete">✓ Complete</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Apr - Jun 2025</div>
+            <div class="timeline-content">
+              <h3>Phase 3: Testing & Refinement</h3>
+              <p>QA testing, bug fixes, accessibility verification, performance optimization</p>
+              <span class="timeline-status complete">✓ Complete</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Jul - Dec 2025</div>
+            <div class="timeline-content">
+              <h3>Phase 4: Deployment & Documentation</h3>
+              <p>Vercel deployment, portfolio website, final report, presentation</p>
+              <span class="timeline-status complete">✓ Complete</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Dec 2, 2025</div>
+            <div class="timeline-content">
+              <h3>Final Presentation</h3>
+              <p>Live 5-minute presentation to class and professor</p>
+              <span class="timeline-status current">→ Current</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Approval & Sign-off -->
+      <div class="content-block">
+        <h2>✍️ Charter Approval</h2>
+                
+        <div class="approval-section">
+          <p class="approval-text">
+            This project charter has been reviewed and approved by all team members and aligns with 
+            the Master's Research Project requirements. The charter serves as the formal authorization 
+            to proceed with the Administrative Workload Analytics Dashboard development.
+          </p>
+                    
+          <div class="approval-grid">
+            <div class="approval-card">
+              <p><strong>Team 16</strong></p>
+              <p>Naveen Ettabouina, Harsha Vardhan Reddy Etikalapadu, Ramesh Alakunta, Karthik, Srikar Reddy</p>
+              <p><em>Approved: August 2024</em></p>
+            </div>
+                        
+            <div class="approval-card">
+              <p><strong>Project Sponsor</strong></p>
+              <p>Silverleaf University Administration</p>
+              <p><em>Approved: August 2024</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="navigation-buttons">
+        <a href="solution.html" class="btn btn-secondary">← Solution</a>
+        <a href="architecture.html" class="btn btn-primary">Architecture →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Team 16 - Administrative Workload Analytics Dashboard | Silverleaf University</p>
+      <p>
+        <a href="https://github.com/harshareddyetikalpadu/Team-Billikens---Manual-Administrative-Workload-Project" target="_blank">GitHub Repository</a> | 
+        <a href="https://university-admin-workload-analytics.vercel.app/login" target="_blank">Live Dashboard</a>
+      </p>
     </div>
   </footer>
 
