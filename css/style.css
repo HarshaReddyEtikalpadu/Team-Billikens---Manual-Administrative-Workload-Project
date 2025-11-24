@@ -975,6 +975,29 @@ html{scroll-behavior:smooth}
 /* subtle hover */
 .card:hover{transform:translateY(-4px);transition:transform .18s}
 
+/* Page card & header visuals - shared enhancements for Solution/Dashboard/Ethics/Lessons */
+.section-card { background: linear-gradient(180deg, #ffffff, #fbfdff); padding: 1.6rem; border-radius: 12px; box-shadow: 0 14px 40px rgba(16,36,64,0.06); margin-bottom: 1.25rem; border: 1px solid rgba(44,62,80,0.04); }
+.section-card h2 { display:flex;align-items:center;gap:10px;font-size:1.2rem }
+.section-card h2 .emoji { font-size:1.35rem }
+
+/* dashboard specific */
+.btn-dashboard-launch{background:linear-gradient(90deg,#667eea,#764ba2);color:#fff;padding:12px 18px;border-radius:10px;border:0;display:inline-block;text-decoration:none}
+.btn-dashboard-launch:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(102,126,234,0.18)}
+
+.copy-btn{background:#eef6ff;border:0;padding:6px 10px;border-radius:8px;margin-left:8px;cursor:pointer}
+.copy-btn:hover{background:#e0efff}
+
+.screenshot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+.screenshot-item .screenshot-placeholder{background:#f6f8fa;border-radius:8px;padding:20px;min-height:120px;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(44,62,80,0.04)}
+
+/* small accent for lists */
+.card ul li::marker{color:var(--secondary)}
+.card ol li::marker{color:var(--secondary)}
+
+/* subtle accent for h1 on pages */
+.container > h1 { display:flex; align-items:center; gap:14px; margin: 28px 0; }
+.container > h1 .page-emoji{font-size:1.5rem}
+
 /* Team Section Enhancements */
 .team-section {
   padding: 4rem 2rem;
