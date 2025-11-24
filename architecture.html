@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Architecture and data design for the project." />
-  <title>Architecture — Administrative Workload Analytics</title>
+  <meta name="description" content="Architecture, data design, and data flow for the Administrative Workload Analytics dashboard." />
+  <title>Architecture & Data Design — Administrative Workload Analytics</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicon.svg">
@@ -13,52 +13,215 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Administrative Workload Analytics</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
       <nav class="nav" id="main-nav">
         <a href="index.html">Home</a>
         <a href="problem.html">Problem</a>
         <a href="research.html">Research</a>
         <a href="solution.html">Solution</a>
         <a href="charter.html">Charter</a>
-        <a href="architecture.html">Architecture</a>
+        <a href="architecture.html" class="active">Architecture</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="ethics.html">Ethics</a>
         <a href="lessons.html">Lessons</a>
+        <a href="conclusion.html">Conclusion</a>
       </nav>
     </div>
   </header>
 
+  <section class="research-hero">
+    <div class="container">
+      <h1>Architecture &amp; Data Design</h1>
+      <p class="hero-subtitle">How the solution is structured across business, IS, technology, and data.</p>
+    </div>
+  </section>
+
   <main class="container">
-    <h1>Architecture & Data Design</h1>
-
-    <section class="card">
-      <h2>Three-Tier Architecture</h2>
-      <p>We adopt a three-tier architecture for clarity and modularity:</p>
-      <ul>
-        <li><strong>Presentation Layer:</strong> React frontend (dashboard views, role-based UI).</li>
-        <li><strong>Application / Analytics Layer:</strong> Analytics engine, recommendations, aggregations.</li>
-        <li><strong>Data Layer:</strong> Storage for requests, logs, daily summaries (prototype uses synthetic CSV/JSON).</li>
-      </ul>
-      <!-- Image: Architecture Diagram -->
+    <section class="section-card">
+      <h2><span class="page-emoji">📐</span> Overview</h2>
+      <p>
+        This page outlines the architecture of Administrative Workload Analytics—covering the business, IS, and technology layers—along with the data pipeline and entity relationships that power the dashboard.
+      </p>
     </section>
 
-    <section class="card">
-      <h2>Data Flow</h2>
-      <p>Requests → Workload logging → ETL (Python) → Aggregation (DailySummary) → Dashboard visualizations & recommendations.</p>
+    <section class="section-card">
+      <h2>Solution Architecture (Business / IS / Tech)</h2>
+      <div class="diagram">
+        <img src="images/Solution Architecture.png" alt="Solution Architecture diagram showing Business, IS, and Technology layers" class="diagram-img">
+        <p class="muted">Figure 1. Business, IS, and Technology layers aligned to support the Administrative Workload Analytics dashboard.</p>
+      </div>
+      <div class="context-grid">
+        <div class="context-card card-primary">
+          <div class="context-header">
+            <div class="context-icon">🏢</div>
+            <h3>Business Architecture</h3>
+          </div>
+          <div class="context-body">
+            <p>The business layer represents how administrative work runs at Silverleaf University:</p>
+            <ul>
+              <li>Intake of student or departmental requests</li>
+              <li>Monitoring and tracking workloads across units</li>
+              <li>Allocating tasks based on demand</li>
+              <li>Reporting performance metrics to leadership</li>
+              <li>Identifying bottlenecks for continuous improvement</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="context-card card-success">
+          <div class="context-header">
+            <div class="context-icon">🧠</div>
+            <h3>IS Architecture</h3>
+          </div>
+          <div class="context-body">
+            <p>How information moves, transforms, and becomes insights:</p>
+            <ul>
+              <li>Synthetic historical data stored as CSV files</li>
+              <li>Python ETL for cleaning and merging datasets</li>
+              <li>Aggregation logic creating daily summaries per department/admin</li>
+              <li>Recommendation logic surfacing trends (peak load days, request types)</li>
+              <li>Visualization dashboards turning raw data into decisions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="context-card card-info">
+          <div class="context-header">
+            <div class="context-icon">💻</div>
+            <h3>Technology Architecture</h3>
+          </div>
+          <div class="context-body">
+            <p>The tools, frameworks, and infrastructure:</p>
+            <ul>
+              <li>Frontend: React + Vite</li>
+              <li>Styling: Tailwind-style utility classes and custom CSS</li>
+              <li>Visualization: Recharts for interactive graphs and KPIs</li>
+              <li>ETL &amp; Data Prep: Python, Pandas, NumPy, Faker</li>
+              <li>Hosting: Vercel for live dashboard deployment</li>
+              <li>Version Control: GitHub for collaboration and dataset management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>ERD (Entities & Relationships)</h2>
-      <p>Six core entities described below. (ER diagram placeholder)</p>
-      <ul>
-        <li><strong>Departments</strong> (1:M Admins, 1:M Requests)</li>
-        <li><strong>Admins</strong> (M:1 Departments, 1:M Requests)</li>
-        <li><strong>Requests</strong> (M:1 Departments/Admins/RequestTypes)</li>
-        <li><strong>RequestTypes</strong> (1:M Requests)</li>
-        <li><strong>WorkloadLog</strong> (M:1 Admins, M:1 Requests)</li>
-        <li><strong>DailySummary</strong> (Aggregated from Requests)</li>
-      </ul>
-      <!-- Image: ERD Diagram -->
+    <section class="section-card">
+      <h2>System Architecture &amp; Data Flow</h2>
+      <div class="diagram">
+        <img src="images/Data Flow Diagram.png" alt="Data flow diagram from synthetic request logs through ETL to the dashboard" class="diagram-img">
+        <p class="muted">Figure 2. End-to-end data flow powering the Administrative Workload Analytics dashboard.</p>
+      </div>
+      <p>
+        The Administrative Workload Analytics system follows a lightweight, client-side architecture. A React (Vite) frontend runs on Vercel and consumes pre-generated CSV datasets. All data is created, cleaned, and aggregated offline in Python before the dashboard loads it for visualization.
+      </p>
+      <p>
+        The synthetic dataset includes Requests, Admins, Departments, RequestTypes, and DailySummary files. React loads these CSVs at runtime, transforms them into chart-ready formats, and uses Recharts to present KPIs like daily volume, department workload, request distribution, and admin performance.
+      </p>
+      <div class="context-grid">
+        <div class="context-card card-primary">
+          <div class="context-header">
+            <div class="context-icon">⚙️</div>
+            <h3>Client-Side Architecture</h3>
+          </div>
+          <div class="context-body">
+            <p>React (Vite) hosted on Vercel, consuming processed CSVs without a backend server. Business logic remains in the offline ETL pipeline.</p>
+          </div>
+        </div>
+        <div class="context-card card-success">
+          <div class="context-header">
+            <div class="context-icon">📑</div>
+            <h3>Dataset Summary</h3>
+          </div>
+          <div class="context-body">
+            <p>CSV files for Requests, Admins, Departments, RequestTypes, and DailySummary feed KPI cards, charts, and filters in the dashboard.</p>
+          </div>
+        </div>
+      </div>
+      <h3>🔄 Step-by-Step Data Pipeline</h3>
+      <ol>
+        <li><strong>Generate Synthetic Data:</strong> Python (Pandas + Faker) simulates realistic workloads, timestamps, request types, and admin assignments.</li>
+        <li><strong>Clean &amp; Normalize:</strong> Fix missing values, format timestamps, normalize text, and ensure each request links to valid admin/department/request type.</li>
+        <li><strong>Merge Datasets:</strong> Combine Departments, Admins, Requests, and RequestTypes into a unified table.</li>
+        <li><strong>Aggregate Workload:</strong> Group by day, department, and admin to produce <code>DailySummary.csv</code>.</li>
+        <li><strong>Export Processed CSVs:</strong> Place cleaned and aggregated files in the project data directory for the frontend.</li>
+        <li><strong>Frontend Loads &amp; Transforms:</strong> React parses CSVs, converts to JSON, and shapes chart-ready series.</li>
+        <li><strong>Visualization &amp; Insights:</strong> Recharts renders trends, distributions, workload comparisons, and admin performance with filters and interactions.</li>
+      </ol>
+      <p>
+        With these aggregated insights, administrators can quickly see overloaded departments, peak workload days, high-volume request types, and targeted opportunities for staffing or process improvement.
+      </p>
+    </section>
+
+    <section class="section-card">
+      <h2>ER Diagram (Entities &amp; Relationships)</h2>
+      <div class="diagram">
+        <img src="images/ERD Diagram.png" alt="Entity-relationship diagram for Departments, Admins, Requests, RequestTypes, WorkloadLog, and DailySummary" class="diagram-img">
+        <p class="muted">
+          Figure 3. Entity-relationship overview showing how Departments, Admins, Requests, RequestTypes, WorkloadLog, and DailySummary interact to support workload analytics and dashboard insights.
+        </p>
+      </div>
+      <p>The data model consists of six core entities representing administrative workload activity at Silverleaf University. These entities feed the aggregated dataset used by the dashboard’s KPIs, charts, and recommendations.</p>
+      <div class="context-grid">
+        <div class="context-card card-primary">
+          <div class="context-header">
+            <div class="context-icon">🏛️</div>
+            <h3>Departments</h3>
+          </div>
+          <div class="context-body">
+            <p>The parent unit; each department oversees multiple admins and receives different categories of workload requests.</p>
+          </div>
+        </div>
+
+        <div class="context-card card-success">
+          <div class="context-header">
+            <div class="context-icon">👤</div>
+            <h3>Admins</h3>
+          </div>
+          <div class="context-body">
+            <p>Staff members responsible for processing requests. Each admin belongs to a single department but handles many requests.</p>
+          </div>
+        </div>
+
+        <div class="context-card card-info">
+          <div class="context-header">
+            <div class="context-icon">📝</div>
+            <h3>Requests</h3>
+          </div>
+          <div class="context-body">
+            <p>The central entity representing incoming administrative tasks. Each request links to a Department, an Admin, and a RequestType, and stores metrics like processing time, status, and complexity.</p>
+          </div>
+        </div>
+
+        <div class="context-card card-warning">
+          <div class="context-header">
+            <div class="context-icon">📂</div>
+            <h3>RequestTypes</h3>
+          </div>
+          <div class="context-body">
+            <p>A controlled list of categories (e.g., Admissions, Financial Aid, International Services) to classify workloads consistently.</p>
+          </div>
+        </div>
+
+        <div class="context-card card-primary">
+          <div class="context-header">
+            <div class="context-icon">🧾</div>
+            <h3>WorkloadLog</h3>
+          </div>
+          <div class="context-body">
+            <p>Action-level trace for each request (timestamps for verification, approvals). Supports deeper process analysis if expanded.</p>
+          </div>
+        </div>
+
+        <div class="context-card card-success">
+          <div class="context-header">
+            <div class="context-icon">📊</div>
+            <h3>DailySummary</h3>
+          </div>
+          <div class="context-body">
+            <p>Aggregated dataset built during ETL. Summarizes volume, processing time, errors, and workload distribution per day/department/admin. This is the primary dataset used by the React dashboard.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <nav class="pager">
@@ -69,7 +232,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© Silverleaf University — Team 16</p>
+      <p>&copy; Silverleaf University - Team 16</p>
     </div>
   </footer>
 

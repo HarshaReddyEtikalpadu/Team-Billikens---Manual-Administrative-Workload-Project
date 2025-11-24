@@ -1,10 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Proposed solution: Administrative Workload Analytics Dashboard." />
-  <title>Solution — Administrative Workload Analytics</title>
+  <title>Proposed Solution - Administrative Workload Analytics</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicon.svg">
@@ -13,69 +12,238 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Administrative Workload Analytics</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
       <nav class="nav" id="main-nav">
         <a href="index.html">Home</a>
         <a href="problem.html">Problem</a>
         <a href="research.html">Research</a>
-        <a href="solution.html">Solution</a>
+        <a href="solution.html" class="active">Solution</a>
         <a href="charter.html">Charter</a>
         <a href="architecture.html">Architecture</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="ethics.html">Ethics</a>
         <a href="lessons.html">Lessons</a>
+        <a href="conclusion.html">Conclusion</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h1><span class="page-emoji">🛠️</span> Proposed Solution</h1>
-    <section class="card section-card">
-      <h2><span class="emoji">✅</span> Overview</h2>
-      <p>We propose a web-based Administrative Workload Analytics Dashboard that consolidates request-level data, offers role-based views, and delivers visual analytics and AI-driven recommendations to optimize staffing and reduce processing times.</p>
+  <section class="research-hero">
+    <div class="container">
+      <h1>Proposed Solution Overview</h1>
+      <p class="hero-subtitle">A modern, data-driven platform for administrative workload analytics</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="research-overview">
+      <div class="container">
+        <div class="overview-card">
+          <div class="overview-icon">💡</div>
+          <h2>What We Built</h2>
+          <p>
+            The <strong>Administrative Workload Analytics Dashboard</strong> transforms opaque operations into transparent, data-driven workflows. By analyzing more than 2,600 requests across two years, the platform offers real-time insights, pinpoints bottlenecks, and delivers AI-powered recommendations to optimize staffing, routing, and quality.
+          </p>
+          <div class="solution-stats-mini">
+            <div class="mini-stat">
+              <span class="mini-icon">📊</span>
+              <span class="mini-label">2,600+ requests analyzed</span>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-icon">⏱️</span>
+              <span class="mini-label">76 min avg verification time</span>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-icon">🧭</span>
+              <span class="mini-label">7 departments covered</span>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-icon">🤖</span>
+              <span class="mini-label">AI-driven insights surfaced</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2><span class="emoji">📦</span> Five Functional Components</h2>
-      <ol>
-        <li><strong>Data Collection:</strong> Event-level logs, request metadata, timestamps, and admin assignments.</li>
-        <li><strong>Role-Based Access:</strong> Admin, Manager, Analyst views with privacy safeguards.</li>
-        <li><strong>Analytics Engine:</strong> Aggregations, anomaly detection, peak-hour analysis.</li>
-        <li><strong>Visualization Dashboard:</strong> KPI cards, charts (pie, bar, line), heatmaps.</li>
-        <li><strong>Recommendations Engine:</strong> AI-driven suggestions for routing, staffing, and automation.</li>
-      </ol>
+    <section class="industry-context-section">
+      <div class="container">
+        <h2 class="section-title">Core Components</h2>
+        <div class="context-grid">
+          <div class="context-card card-primary">
+            <div class="context-header">
+              <div class="context-icon">📥</div>
+              <h3>Data Collection &amp; Integration</h3>
+            </div>
+            <div class="context-body">
+              <p>Detailed request capture with department, type, timing, ownership, and error tracking to build a reliable analytics layer.</p>
+              <p class="feature-tag">Cleansed &amp; normalized</p>
+            </div>
+          </div>
+
+          <div class="context-card card-success">
+            <div class="context-header">
+              <div class="context-icon">🔐</div>
+              <h3>Role-Based Access</h3>
+            </div>
+            <div class="context-body">
+              <p>Personalized views for administrators, managers, and analysts with least-privilege visibility.</p>
+              <p class="feature-tag">Individual • Team • Cross-department</p>
+            </div>
+          </div>
+
+          <div class="context-card card-info">
+            <div class="context-header">
+              <div class="context-icon">📈</div>
+              <h3>Analytics Engine</h3>
+            </div>
+            <div class="context-body">
+              <p>Descriptive stats, correlations, trends, and predictive indicators like SLA risk and bottleneck alerts.</p>
+              <p class="feature-tag">Trends • Predictions • Correlations</p>
+            </div>
+          </div>
+
+          <div class="context-card card-warning">
+            <div class="context-header">
+              <div class="context-icon">📊</div>
+              <h3>Visualization Dashboard</h3>
+            </div>
+            <div class="context-body">
+              <p>Interactive KPI cards, charts, and peak-hour heatmaps for quick situational awareness.</p>
+              <p class="feature-tag">8 KPIs • Interactive charts • Heatmaps</p>
+            </div>
+          </div>
+
+          <div class="context-card card-primary">
+            <div class="context-header">
+              <div class="context-icon">✨</div>
+              <h3>Recommendations Engine</h3>
+            </div>
+            <div class="context-body">
+              <p>AI-powered insights to identify automation opportunities, staffing shifts, and training needs.</p>
+              <p class="feature-tag">Automation • Staffing • Skills</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2><span class="emoji">🧰</span> Technology Stack & Justification</h2>
-      <ul>
-        <li><strong>Frontend:</strong> React 18, Tailwind CSS, Recharts — modern, component-driven UI and rich charts.</li>
-        <li><strong>Data:</strong> Python (Pandas, Faker, NumPy) for synthetic data generation and ETL.</li>
-        <li><strong>Deployment:</strong> Vercel for fast static hosting and CI/CD integration.</li>
-        <li><strong>Build Tool:</strong> Vite for fast builds and dev experience.</li>
-      </ul>
+    <section class="academic-research">
+      <div class="container">
+        <h2 class="section-title">Technology Architecture</h2>
+        <p class="section-intro">Chosen for speed, modularity, and maintainability</p>
+
+        <div class="research-timeline">
+          <div class="research-item">
+            <div class="research-year">Frontend</div>
+            <div class="research-content">
+              <h3>React • Tailwind • Recharts • Vite</h3>
+              <p>Reusable components, responsive styling, accessible visualizations, and a fast build pipeline.</p>
+            </div>
+          </div>
+
+          <div class="research-item">
+            <div class="research-year">Data</div>
+            <div class="research-content">
+              <h3>Python • Pandas • NumPy • Faker</h3>
+              <p>Synthetic, privacy-safe datasets with robust manipulation and statistical modeling.</p>
+            </div>
+          </div>
+
+          <div class="research-item">
+            <div class="research-year">Deployment</div>
+            <div class="research-content">
+              <h3>Vercel • GitHub • CI/CD</h3>
+              <p>Automated delivery, version control, and secure access for reliable stakeholder previews.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2><span class="emoji">🎯</span> Solution Goals</h2>
-      <ul>
-        <li>Improve processing efficiency (target 30–40% reduction in verification cycles).</li>
-        <li>Reduce International Office backlog by 50%.</li>
-        <li>Optimize peak-hour staffing for 9–11 AM demand.</li>
-        <li>Reduce errors and rework through quality checks and training.</li>
-        <li>Provide managers with actionable, role-based insights.</li>
-      </ul>
+    <section class="supporting-data">
+      <div class="container">
+        <h2 class="section-title">Solution Goals &amp; Impact</h2>
+
+        <div class="benchmark-grid">
+          <div class="benchmark-card">
+            <div class="benchmark-icon">🔍</div>
+            <h3>Transparency</h3>
+            <p>Visibility into workloads, ownership, and progress across all departments.</p>
+          </div>
+
+          <div class="benchmark-card">
+            <div class="benchmark-icon">⚡</div>
+            <h3>Inefficiency Reduction</h3>
+            <p>Cut rework and bottlenecks to accelerate processing and lower costs.</p>
+          </div>
+
+          <div class="benchmark-card">
+            <div class="benchmark-icon">⚖️</div>
+            <h3>Balanced Workloads</h3>
+            <p>Fairly distribute tasks across administrators and teams.</p>
+          </div>
+
+          <div class="benchmark-card">
+            <div class="benchmark-icon">📊</div>
+            <h3>Data-Driven Decisions</h3>
+            <p>Inform staffing, routing, and training with evidence-backed insights.</p>
+          </div>
+
+          <div class="benchmark-card">
+            <div class="benchmark-icon">🎯</div>
+            <h3>Optimized Resources</h3>
+            <p>Support strategic allocation and justify investments with measurable ROI.</p>
+          </div>
+
+          <div class="benchmark-card">
+            <div class="benchmark-icon">♻️</div>
+            <h3>Continuous Improvement</h3>
+            <p>Build feedback loops for ongoing optimization.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <nav class="pager">
-      <a class="btn" href="research.html">Previous</a>
-      <a class="btn primary" href="charter.html">Next</a>
-    </nav>
+    <section class="key-takeaways">
+      <div class="container">
+        <h2 class="section-title">Expected Outcomes</h2>
+
+        <div class="takeaways-grid">
+          <div class="takeaway-card">
+            <div class="takeaway-number">1</div>
+            <h3>Efficiency Gains</h3>
+            <p>30-40% reduction in document verification time and 15% overall processing improvement.</p>
+          </div>
+
+          <div class="takeaway-card">
+            <div class="takeaway-number">2</div>
+            <h3>Cost Savings</h3>
+            <p>$74,400 annual savings from automation with reduced overtime and faster turnaround.</p>
+          </div>
+
+          <div class="takeaway-card">
+            <div class="takeaway-number">3</div>
+            <h3>Quality Improvements</h3>
+            <p>70% reduction in error rates, 90%+ SLA compliance, and higher stakeholder satisfaction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="navigation-buttons">
+          <a href="research.html" class="btn btn-secondary">&#8592; Research</a>
+          <a href="charter.html" class="btn btn-primary">Charter &#8594;</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© Silverleaf University — Team 16</p>
+      <p>&copy; Silverleaf University - Team 16</p>
     </div>
   </footer>
 

@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Ethical and social considerations for the project." />
-  <title>Ethics — Administrative Workload Analytics</title>
+  <title>Ethics - Administrative Workload Analytics</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicon.svg">
@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Administrative Workload Analytics</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
       <nav class="nav" id="main-nav">
         <a href="index.html">Home</a>
         <a href="problem.html">Problem</a>
@@ -22,48 +22,147 @@
         <a href="charter.html">Charter</a>
         <a href="architecture.html">Architecture</a>
         <a href="dashboard.html">Dashboard</a>
-        <a href="ethics.html">Ethics</a>
+        <a href="ethics.html" class="active">Ethics</a>
         <a href="lessons.html">Lessons</a>
+        <a href="conclusion.html">Conclusion</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h1><span class="page-emoji">⚖️</span> Ethical & Social Considerations</h1>
+  <section class="research-hero">
+    <div class="container">
+      <h1>Ethical &amp; Social Considerations</h1>
+      <p class="hero-subtitle">Ensuring privacy, fairness, accessibility, and sustainability</p>
+    </div>
+  </section>
 
-    <section class="card section-card">
-      <h2><span class="emoji">🔐</span> Data Privacy & Security</h2>
-      <ul>
-        <li>Role-based access controls to limit data exposure.</li>
-        <li>Anonymize student-identifiable data in all analytics.</li>
-        <li>Secure storage and transfer (TLS, access logging) for production systems.</li>
-      </ul>
+  <main>
+    <section class="research-overview">
+      <div class="container">
+        <div class="overview-card">
+          <div class="overview-icon">⚖️</div>
+          <h2>Our Commitment</h2>
+          <p>
+            The dashboard is designed to respect individual privacy, minimize bias, and support equitable decision-making. We emphasize transparency, accessibility, and responsible use of analytics to improve workflows while protecting the people behind the data.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2><span class="emoji">⚖️</span> Bias Mitigation & Fairness</h2>
-      <p>Adjust performance metrics for task complexity and avoid punitive comparisons. Use transparent scoring and multiple measures before decisions.</p>
+    <section class="industry-context-section">
+      <div class="container">
+        <h2 class="section-title">Ethical Pillars</h2>
+        <p class="section-intro">Guardrails that shape how data is collected, used, and governed</p>
+
+        <div class="context-grid">
+          <div class="context-card card-primary">
+            <div class="context-header">
+              <div class="context-icon">🔐</div>
+              <h3>Data Privacy &amp; Security</h3>
+            </div>
+            <div class="context-body">
+              <p>Role-based access, anonymization of student data, and secure transfer with TLS and audit logging.</p>
+              <p class="feature-tag">Least privilege • Audit trails</p>
+            </div>
+          </div>
+
+          <div class="context-card card-success">
+            <div class="context-header">
+              <div class="context-icon">⚙️</div>
+              <h3>Bias Mitigation &amp; Fairness</h3>
+            </div>
+            <div class="context-body">
+              <p>Adjust metrics for task complexity, avoid punitive comparisons, and use transparent scoring.</p>
+              <p class="feature-tag">Context-aware metrics</p>
+            </div>
+          </div>
+
+          <div class="context-card card-info">
+            <div class="context-header">
+              <div class="context-icon">♿</div>
+              <h3>Accessibility &amp; Inclusion</h3>
+            </div>
+            <div class="context-body">
+              <p>WCAG-informed design: clear contrast, keyboard navigation, descriptive labels, and screen reader-friendly structure.</p>
+              <p class="feature-tag">WCAG 2.1 AA aligned</p>
+            </div>
+          </div>
+
+          <div class="context-card card-warning">
+            <div class="context-header">
+              <div class="context-icon">🌱</div>
+              <h3>Sustainability &amp; Workplace</h3>
+            </div>
+            <div class="context-body">
+              <p>Favor digital reporting, use analytics to support staff development, and avoid punitive monitoring.</p>
+              <p class="feature-tag">Supportive analytics</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2><span class="emoji">♿</span> Accessibility & Inclusion</h2>
-      <p>Design follows WCAG 2.1 AA where possible (clear contrast, keyboard navigability, screen reader-friendly structure).</p>
+    <section class="supporting-data">
+      <div class="container">
+        <h2 class="section-title">Responsible Operations</h2>
+
+        <div class="benchmark-grid">
+          <div class="benchmark-card">
+            <div class="benchmark-icon">📜</div>
+            <h3>Documentation</h3>
+            <p>Track data sources, transformations, and model assumptions for transparency.</p>
+          </div>
+          <div class="benchmark-card">
+            <div class="benchmark-icon">🛡️</div>
+            <h3>Data Minimization</h3>
+            <p>Provide opt-out paths and collect only what is necessary for analysis.</p>
+          </div>
+          <div class="benchmark-card">
+            <div class="benchmark-icon">👁️</div>
+            <h3>Human Oversight</h3>
+            <p>Review recommendations with human judgment before implementing process changes.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2><span class="emoji">🌱</span> Sustainability & Workplace Implications</h2>
-      <p>Prefer digital reporting to reduce paper waste. Use analytics to support staff (training and resource allocation) rather than punitive monitoring.</p>
+    <section class="key-takeaways">
+      <div class="container">
+        <h2 class="section-title">Practical Safeguards</h2>
+
+        <div class="takeaways-grid">
+          <div class="takeaway-card">
+            <div class="takeaway-number">1</div>
+            <h3>Privacy by Design</h3>
+            <p>Anonymization, least-privilege access, and encryption applied from the start.</p>
+          </div>
+          <div class="takeaway-card">
+            <div class="takeaway-number">2</div>
+            <h3>Fairness Checks</h3>
+            <p>Complexity-aware metrics and multi-measure scoring to prevent punitive comparisons.</p>
+          </div>
+          <div class="takeaway-card">
+            <div class="takeaway-number">3</div>
+            <h3>Inclusive UX</h3>
+            <p>Accessible layouts, keyboard support, and clear labels for all user roles.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <nav class="pager">
-      <a class="btn" href="dashboard.html">Previous</a>
-      <a class="btn primary" href="lessons.html">Next</a>
-    </nav>
+    <section class="content-section">
+      <div class="container">
+        <div class="navigation-buttons">
+          <a href="dashboard.html" class="btn btn-secondary">&#8592; Dashboard</a>
+          <a href="lessons.html" class="btn btn-primary">Lessons &#8594;</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© Silverleaf University — Team 16</p>
+      <p>&copy; Silverleaf University - Team 16</p>
     </div>
   </footer>
 

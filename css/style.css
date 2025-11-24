@@ -1524,3 +1524,295 @@ html{scroll-behavior:smooth}
   text-decoration: underline;
   color: #2980b9;
 }
+
+/* --- Appended Solution page styles (user provided) --- */
+.solution-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.solution-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Solution Overview */
+.solution-overview {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.solution-intro-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  max-width: 1100px;
+  margin: 0 auto;
+  border-top: 6px solid #667eea;
+}
+
+.solution-intro-card h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro-text strong {
+  color: #667eea;
+}
+
+.solution-stats-mini {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.mini-stat {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  border-left: 4px solid #667eea;
+}
+
+.mini-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.mini-label {
+  display: block;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.solution-components { padding: 4rem 2rem; background: white; }
+.components-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap:2rem; max-width:1400px; margin:0 auto; }
+.component-card { background:white; padding:2.5rem; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.1); transition:transform .3s, box-shadow .3s; border-top:5px solid #3498db }
+.component-card:hover { transform: translateY(-10px); box-shadow:0 15px 40px rgba(0,0,0,0.15); }
+.component-icon{font-size:3.5rem;text-align:center;margin-bottom:1rem}
+.feature-tag{ background:#e8f5e9;color:#2e7d32;padding:0.4rem 0.8rem;border-radius:15px;font-size:0.85rem;font-weight:600; }
+
+@media (max-width: 768px) {
+  .solution-hero h1{ font-size:2rem }
+  .solution-stats-mini, .outcomes-columns { grid-template-columns:1fr }
+}
+
+/* Ethics Page Styles */
+.ethics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.ethics-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-top: 5px solid #667eea;
+}
+
+.ethics-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.ethics-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ethics-card .emoji {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.ethics-card h2 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin: 0;
+  flex: 1;
+}
+
+.ethics-card p,
+.ethics-card ul {
+  color: #555;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.ethics-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ethics-card ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.ethics-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .ethics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .ethics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lessons Page Styles */
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.lessons-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-top: 5px solid #764ba2;
+}
+
+.lessons-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.lessons-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.lessons-card .emoji {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.lessons-card h2 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin: 0;
+  flex: 1;
+}
+
+.lessons-card p,
+.lessons-card ul {
+  color: #555;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.lessons-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lessons-card ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.lessons-card ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #764ba2;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .lessons-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .lessons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hero section inside main.container */
+main.container > .solution-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem 0;
+  margin: 0 -2rem 3rem -2rem;
+  text-align: center;
+}
+
+main.container > .solution-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+main.container > .solution-hero .page-emoji {
+  font-size: 2.5rem;
+}
+
+main.container > .solution-hero .hero-sub {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  main.container > .solution-hero {
+    padding: 2rem 0;
+    margin: 0 -1.5rem 2rem -1.5rem;
+  }
+  
+  main.container > .solution-hero h1 {
+    font-size: 1.8rem;
+  }
+}
+

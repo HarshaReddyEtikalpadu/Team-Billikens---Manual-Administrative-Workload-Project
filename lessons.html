@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Lessons learned and team reflection." />
-  <title>Lessons Learned — Administrative Workload Analytics</title>
+  <title>Lessons Learned - Administrative Workload Analytics</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicon.svg">
@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Administrative Workload Analytics</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
       <nav class="nav" id="main-nav">
         <a href="index.html">Home</a>
         <a href="problem.html">Problem</a>
@@ -23,183 +23,160 @@
         <a href="architecture.html">Architecture</a>
         <a href="dashboard.html">Dashboard</a>
         <a href="ethics.html">Ethics</a>
-        <a href="lessons.html">Lessons</a>
+        <a href="lessons.html" class="active">Lessons</a>
+        <a href="conclusion.html">Conclusion</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h1><span class="page-emoji">📚</span> Lessons Learned & Team Reflection</h1>
+  <section class="research-hero">
+    <div class="container">
+      <h1>Lessons Learned &amp; Team Reflection</h1>
+      <p class="hero-subtitle">Reflecting on team growth, collaboration, and technical decisions</p>
+    </div>
+  </section>
 
-    <section class="card section-card">
-      <h2><span class="emoji">👥</span> Team Dynamics</h2>
-      <p>Five-member team worked in agile sprints with GitHub collaboration. Roles were distributed to balance technical, design, and documentation needs.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="emoji">🔧</span> Major Decisions</h2>
-      <ul>
-        <li><strong>Synthetic vs Real Data:</strong> Chose synthetic data to protect privacy while enabling realistic testing.</li>
-        <li><strong>Technology Stack:</strong> React chosen for portfolio value and rich UX; Python for data generation.</li>
-        <li><strong>Feature Prioritization:</strong> Focused on core analytics and visualization rather than full ML predictions.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2><span class="emoji">✨</span> Key Takeaways</h2>
-      <ul>
-        <li><strong>Technical:</strong> Hands-on experience with React, charting, and data engineering principles.</li>
-        <li><strong>Process:</strong> Iterative prototyping and early stakeholder feedback are essential.</li>
-        <li><strong>Professional:</strong> This project resulted in portfolio-ready artifacts useful for interviews and demos.</li>
-      </ul>
-    </section>
-
-    <!-- References Section -->
-    <section class="references-section">
+  <main>
+    <section class="research-overview">
       <div class="container">
-        <h2>📚 References & Bibliography</h2>
-        <p class="references-intro">
-          Our research and development process was informed by industry reports, 
-          academic literature, and best practices from leading organizations in 
-          higher education administration and data analytics.
-        </p>
+        <div class="overview-card">
+          <div class="overview-icon">📚</div>
+          <h2>Project Reflections</h2>
+          <p>We balanced fast experimentation with disciplined delivery, aligning roles, tools, and timelines to ship a cohesive analytics experience.</p>
+        </div>
+      </div>
+    </section>
 
-        <div class="reference-categories">
-          <!-- Higher Education Research -->
-          <div class="reference-category">
-            <h3>Higher Education Administration & Workload Research</h3>
-            <ol class="reference-list">
-              <li>
-                NACUBO (National Association of College and University Business Officers). (2023). 
-                <em>2023 Higher Education Operating and Administrative Expenditures Report.</em> 
-                NACUBO Research. 
-                <a href="https://www.nacubo.org/Research" target="_blank" rel="noopener">https://www.nacubo.org/Research</a>
-              </li>
-              <li>
-                Deloitte. (2022). <em>The Future of Higher Education: Workforce Analytics and 
-                Administrative Transformation.</em> Deloitte Insights. 
-                <a href="https://www2.deloitte.com/us/en/insights" target="_blank" rel="noopener">https://www2.deloitte.com/us/en/insights</a>
-              </li>
-              <li>
-                EDUCAUSE. (2023). <em>Analytics to Improve Administrative Efficiency in Higher Education.</em> 
-                EDUCAUSE Review. 
-                <a href="https://er.educause.edu/" target="_blank" rel="noopener">https://er.educause.edu/</a>
-              </li>
-              <li>
-                Gartner. (2023). <em>Higher Education: Administrative Modernization and Workforce Optimization.</em> 
-                Gartner Industry Research.
-              </li>
-              <li>
-                McKinsey & Company. (2023). <em>Reducing Administrative Burden Through Digital Automation.</em> 
-                <a href="https://www.mckinsey.com/industries/public-sector" target="_blank" rel="noopener">https://www.mckinsey.com/industries/public-sector</a>
-              </li>
-            </ol>
+    <section class="industry-context-section">
+      <div class="container">
+        <h2 class="section-title">Team Dynamics</h2>
+        <p class="section-intro">Collaboration patterns and how we organized the work</p>
+
+        <div class="context-grid">
+          <div class="context-card card-primary">
+            <div class="context-header">
+              <div class="context-icon">👥</div>
+              <h3>Agile Collaboration</h3>
+            </div>
+            <div class="context-body">
+              <p>Five-member team worked in sprints with GitHub workflows, balancing technical, design, and documentation responsibilities.</p>
+            </div>
           </div>
 
-          <!-- Workflow Automation -->
-          <div class="reference-category">
-            <h3>Workflow Automation, Process Optimization & Analytics</h3>
-            <ol class="reference-list" start="6">
-              <li>
-                IBM. (2022). <em>Automation in Higher Education: Reducing Manual Workload with AI and RPA.</em> 
-                IBM Academic Solutions Whitepaper.
-              </li>
-              <li>
-                PwC (PricewaterhouseCoopers). (2023). <em>Digital Transformation in Universities: 
-                Improving Student and Administrative Services.</em> 
-                <a href="https://www.pwc.com" target="_blank" rel="noopener">https://www.pwc.com</a>
-              </li>
-              <li>
-                Higher Education Statistics Agency (HESA). (2024). <em>Workload and Efficiency Patterns 
-                in UK Universities.</em> 
-                <a href="https://www.hesa.ac.uk/" target="_blank" rel="noopener">https://www.hesa.ac.uk/</a>
-              </li>
-              <li>
-                Bichsel, J. (2018). <em>The Analytics Revolution in Higher Education.</em> 
-                EDUCAUSE Center for Applied Research.
-              </li>
-            </ol>
+          <div class="context-card card-success">
+            <div class="context-header">
+              <div class="context-icon">🔧</div>
+              <h3>Major Decisions</h3>
+            </div>
+            <div class="context-body">
+              <p><strong>Synthetic vs Real Data:</strong> Chose synthetic data to protect privacy while enabling realistic testing.</p>
+              <p><strong>Technology Stack:</strong> React for rich UX; Python for data generation and shaping.</p>
+              <p><strong>Feature Prioritization:</strong> Focused on analytics and visualization before advanced ML predictions.</p>
+            </div>
           </div>
 
-          <!-- Dashboard Design -->
-          <div class="reference-category">
-            <h3>Dashboard Design, Data Visualization, and User Experience</h3>
-            <ol class="reference-list" start="10">
-              <li>
-                Few, S. (2013). <em>Information Dashboard Design: Displaying Data for At-a-Glance Monitoring.</em> 
-                Analytics Press.
-              </li>
-              <li>
-                Knaflic, C. N. (2015). <em>Storytelling with Data: A Data Visualization Guide for 
-                Business Professionals.</em> Wiley.
-              </li>
-              <li>
-                Nielsen Norman Group. (2022). <em>Usability Guidelines for Dashboard Design.</em> 
-                <a href="https://www.nngroup.com/articles/dashboard-design/" target="_blank" rel="noopener">https://www.nngroup.com/articles/dashboard-design/</a>
-              </li>
-            </ol>
-          </div>
-
-          <!-- Web Technology -->
-          <div class="reference-category">
-            <h3>Web Technology & Tools Used</h3>
-            <ol class="reference-list" start="13">
-              <li>
-                React Documentation. (2024). <em>React Official Documentation.</em> 
-                <a href="https://react.dev/" target="_blank" rel="noopener">https://react.dev/</a>
-              </li>
-              <li>
-                Tailwind CSS. (2024). <em>Tailwind CSS Documentation.</em> 
-                <a href="https://tailwindcss.com/" target="_blank" rel="noopener">https://tailwindcss.com/</a>
-              </li>
-              <li>
-                Recharts. (2024). <em>Recharts Charting Library Documentation.</em> 
-                <a href="https://recharts.org/" target="_blank" rel="noopener">https://recharts.org/</a>
-              </li>
-              <li>
-                Vercel. (2024). <em>Deploying Modern Web Applications.</em> 
-                <a href="https://vercel.com/docs" target="_blank" rel="noopener">https://vercel.com/docs</a>
-              </li>
-              <li>
-                Python Software Foundation. (2024). <em>Faker, NumPy, and Pandas Libraries.</em> 
-                <a href="https://pandas.pydata.org/" target="_blank" rel="noopener">https://pandas.pydata.org/</a>, 
-                <a href="https://numpy.org/" target="_blank" rel="noopener">https://numpy.org/</a>, 
-                <a href="https://faker.readthedocs.io/" target="_blank" rel="noopener">https://faker.readthedocs.io/</a>
-              </li>
-            </ol>
-          </div>
-
-          <!-- Ethical Considerations -->
-          <div class="reference-category">
-            <h3>Ethical, Privacy & Data Governance</h3>
-            <ol class="reference-list" start="18">
-              <li>
-                EDUCAUSE. (2022). <em>Ethical Analytics in Higher Education.</em> 
-                <a href="https://er.educause.edu/" target="_blank" rel="noopener">https://er.educause.edu/</a>
-              </li>
-              <li>
-                OECD. (2021). <em>AI, Data Privacy, and Higher Education Governance.</em> 
-                <a href="https://www.oecd.org/" target="_blank" rel="noopener">https://www.oecd.org/</a>
-              </li>
-              <li>
-                GDPR Portal. (2023). <em>Guidelines on Data Minimization and Anonymization.</em> 
-                <a href="https://gdpr.eu/" target="_blank" rel="noopener">https://gdpr.eu/</a>
-              </li>
-            </ol>
+          <div class="context-card card-info">
+            <div class="context-header">
+              <div class="context-icon">🎯</div>
+              <h3>Key Takeaways</h3>
+            </div>
+            <div class="context-body">
+              <p><strong>Technical:</strong> React, charting, and data engineering practice.</p>
+              <p><strong>Process:</strong> Iterative prototyping with early stakeholder feedback.</p>
+              <p><strong>Professional:</strong> Portfolio-ready artifacts for demos and interviews.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <nav class="pager">
-      <a class="btn" href="ethics.html">Previous</a>
-      <a class="btn primary" href="index.html">Next</a>
-    </nav>
+    <section class="academic-research">
+      <div class="container">
+        <h2 class="section-title">References &amp; Bibliography</h2>
+        <p class="section-intro">Sources that informed our research, design, and implementation</p>
+
+        <div class="research-timeline">
+          <div class="research-item">
+            <div class="research-year">Higher Education</div>
+            <div class="research-content">
+              <h3>Administration &amp; Workload Research</h3>
+              <ul>
+                <li>NACUBO. <em>2023 Higher Education Operating and Administrative Expenditures Report.</em></li>
+                <li>Deloitte. <em>The Future of Higher Education: Workforce Analytics and Administrative Transformation.</em></li>
+                <li>EDUCAUSE. <em>Analytics to Improve Administrative Efficiency in Higher Education.</em></li>
+                <li>Gartner. <em>Administrative Modernization and Workforce Optimization.</em></li>
+                <li>McKinsey &amp; Company. <em>Reducing Administrative Burden Through Digital Automation.</em></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="research-item">
+            <div class="research-year">Automation &amp; Analytics</div>
+            <div class="research-content">
+              <h3>Workflow &amp; Process Optimization</h3>
+              <ul>
+                <li>IBM. <em>Automation in Higher Education: Reducing Manual Workload with AI and RPA.</em></li>
+                <li>PwC. <em>Digital Transformation in Universities.</em></li>
+                <li>HESA. <em>Workload and Efficiency Patterns in UK Universities.</em></li>
+                <li>Bichsel, J. <em>The Analytics Revolution in Higher Education.</em></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="research-item">
+            <div class="research-year">Design &amp; UX</div>
+            <div class="research-content">
+              <h3>Dashboard &amp; Visualization</h3>
+              <ul>
+                <li>Few, S. <em>Information Dashboard Design.</em></li>
+                <li>Knaflic, C. N. <em>Storytelling with Data.</em></li>
+                <li>Nielsen Norman Group. <em>Usability Guidelines for Dashboard Design.</em></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="research-item">
+            <div class="research-year">Technology</div>
+            <div class="research-content">
+              <h3>Tools &amp; Libraries</h3>
+              <ul>
+                <li>React Documentation</li>
+                <li>Tailwind CSS</li>
+                <li>Recharts</li>
+                <li>Vercel</li>
+                <li>Python, Faker, NumPy, Pandas</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="research-item">
+            <div class="research-year">Ethics &amp; Governance</div>
+            <div class="research-content">
+              <h3>Privacy &amp; Data Governance</h3>
+              <ul>
+                <li>EDUCAUSE. <em>Ethical Analytics in Higher Education.</em></li>
+                <li>OECD. <em>AI, Data Privacy, and Higher Education Governance.</em></li>
+                <li>GDPR Portal. <em>Guidelines on Data Minimization and Anonymization.</em></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="navigation-buttons">
+          <a href="ethics.html" class="btn btn-secondary">&#8592; Ethics</a>
+          <a href="conclusion.html" class="btn btn-primary">Conclusion &#8594;</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© Silverleaf University — Team 16</p>
+      <p>&copy; Silverleaf University - Team 16</p>
     </div>
   </footer>
 
