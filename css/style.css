@@ -5,16 +5,17 @@
   --bg:#f8f9fa;
   --text:#333333;
   --white:#ffffff;
-  --header-height:72px;
+  --header-height:76px;
 }
 /* Reset & base */
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;color:var(--text);background:var(--bg);line-height:1.8}
+.body-padding, body{padding-top:var(--header-height)}
 .container{max-width:1100px;margin:0 auto;padding:24px}
 
 /* Header / Navigation */
-.site-header{position:sticky;top:0;left:0;right:0;background:linear-gradient(180deg,var(--white),rgba(255,255,255,0.95));box-shadow:0 1px 8px rgba(44,62,80,0.06);z-index:9999}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.site-header{position:fixed;top:0;left:0;right:0;height:var(--header-height);background:linear-gradient(180deg,var(--white),rgba(255,255,255,0.95));box-shadow:0 1px 8px rgba(44,62,80,0.06);z-index:2000}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;height:100%}
 .brand{font-weight:700;color:var(--primary);text-decoration:none;font-size:1.1rem}
 .nav{display:flex;gap:12px}
 .nav a{color:var(--primary);text-decoration:none;padding:8px;border-radius:6px;transition:all .18s}
@@ -47,7 +48,7 @@ html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, system-ui, -apple-s
 
 /* responsive */
 @media (max-width:800px){
-  .nav{position:fixed;right:12px;top:calc(var(--header-height) + 6px);background:var(--white);padding:12px;border-radius:8px;flex-direction:column;display:none;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+  .nav{position:fixed;right:12px;top:calc(var(--header-height) - 10px);background:var(--white);padding:12px;border-radius:8px;flex-direction:column;display:none;box-shadow:0 6px 20px rgba(0,0,0,.08)}
   .nav.show{display:flex}
   .nav-toggle{display:inline-block}
 }
@@ -902,6 +903,13 @@ html,body{height:100%;margin:0;font-family:Segoe UI, Roboto, system-ui, -apple-s
 .problem-main { min-width:0; }
 .problem-aside { position:relative; }
 .problem-aside .sticky { position: sticky; top: 88px; background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+
+/* Problem page spacing alignment */
+.problem-statement-section,
+.statistics-showcase { padding: 3rem 2rem; }
+.problem-statement-section .problem-card-large { margin: 0 auto 24px; }
+.statistics-showcase .container { padding-top: 0; }
+.problem-layout { margin-top: 0; }
 
 /* Collapse long lists into details for better compactness */
 details.pane { background: #fff; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
