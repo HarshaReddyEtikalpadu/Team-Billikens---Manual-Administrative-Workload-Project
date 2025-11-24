@@ -1,69 +1,413 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Research & insights for the project." />
-  <title>Research — Administrative Workload Analytics</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Insights - Administrative Workload Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Administrative Workload Analytics</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="problem.html">Problem</a>
-        <a href="research.html">Research</a>
-        <a href="solution.html">Solution</a>
-        <a href="charter.html">Charter</a>
-        <a href="architecture.html">Architecture</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="ethics.html">Ethics</a>
-        <a href="lessons.html">Lessons</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <h1>Research & Insights</h1>
-    <section class="card">
-      <h2>Industry Context</h2>
-      <p>Peer research (NACUBO, EDUCAUSE, Deloitte) indicates that higher education institutions can gain 15–22% efficiency improvements through targeted analytics and 60–70% potential for automating repetitive administrative tasks. These findings guided our design choices and prioritized interventions with quick ROI.</p>
-    </section>
-
-    <section class="card">
-      <h2>Supporting Data</h2>
-      <ul>
-        <li>Automation potential in back-office processes: 60–70%</li>
-        <li>Document verification process amenable to automation and validation checks</li>
-        <li>Staffing adjustments during peak hours can meaningfully reduce wait times</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Academic Citations</h2>
-      <ul>
-        <li>Deloitte University Insights — Administrative process automation</li>
-        <li>EDUCAUSE — Analytics adoption in higher education</li>
-        <li>NACUBO — Finance and operations best practices</li>
-      </ul>
-      <p>These sources were used to validate assumptions about achievable efficiency gains and to benchmark Silverleaf's potential outcomes against similar institutions.</p>
-    </section>
-
-    <nav class="pager">
-      <a class="btn" href="problem.html">Previous</a>
-      <a class="btn primary" href="solution.html">Next</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Administrative Workload Analytics</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="problem.html">Problem</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="solution.html">Solution</a></li>
+                <li><a href="charter.html">Charter</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ethics.html">Ethics</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+            </ul>
+        </div>
     </nav>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© Silverleaf University — Team 16</p>
-    </div>
-  </footer>
+    <!-- Hero Section -->
+    <section class="research-hero">
+        <div class="container">
+            <h1>Research & Insights</h1>
+            <p class="hero-subtitle">Evidence-based foundation supporting our analytics solution</p>
+        </div>
+    </section>
 
-  <script src="js/main.js"></script>
+    <!-- Overview -->
+    <section class="research-overview">
+        <div class="container">
+            <div class="overview-card">
+                <div class="overview-icon">📚</div>
+                <h2>Why This Research Matters</h2>
+                <p>
+                    Our solution design is grounded in extensive industry research, academic studies, and 
+                    best practices from leading organizations. This evidence base validates our approach 
+                    and demonstrates that analytics-driven administrative optimization is not just theoretical—it's 
+                    proven, measurable, and achievable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Context -->
+    <section class="industry-context-section">
+        <div class="container">
+            <h2 class="section-title">Industry Context & Trends</h2>
+            <p class="section-intro">National data reveals systemic challenges in higher education administration</p>
+
+            <div class="context-grid">
+                <div class="context-card card-primary">
+                    <div class="context-header">
+                        <div class="context-icon">📊</div>
+                        <h3>Rising Administrative Costs</h3>
+                    </div>
+                    <div class="context-body">
+                        <div class="stat-highlight">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">years of continuous growth</span>
+                        </div>
+                        <p>
+                            According to NACUBO's 2023 report, administrative spending has outpaced 
+                            instructional spending for over a decade, forcing institutions to seek 
+                            operational efficiency improvements.
+                        </p>
+                        <div class="source-tag">Source: NACUBO (2023)</div>
+                    </div>
+                </div>
+
+                <div class="context-card card-success">
+                    <div class="context-header">
+                        <div class="context-icon">🤖</div>
+                        <h3>Automation Opportunities</h3>
+                    </div>
+                    <div class="context-body">
+                        <div class="stat-highlight">
+                            <span class="stat-number">60-70%</span>
+                            <span class="stat-label">tasks automatable</span>
+                        </div>
+                        <p>
+                            McKinsey's 2023 study identifies that document processing and multi-step 
+                            student services offer 60-70% automation potential, providing significant 
+                            cost and time savings opportunities.
+                        </p>
+                        <div class="source-tag">Source: McKinsey & Company (2023)</div>
+                    </div>
+                </div>
+
+                <div class="context-card card-info">
+                    <div class="context-header">
+                        <div class="context-icon">📈</div>
+                        <h3>Analytics as Top Priority</h3>
+                    </div>
+                    <div class="context-body">
+                        <div class="stat-highlight">
+                            <span class="stat-number">#1</span>
+                            <span class="stat-label">institutional priority</span>
+                        </div>
+                        <p>
+                            EDUCAUSE's 2023 Horizon Report identifies workflow automation, analytics, 
+                            and digital transformation as the top institutional priorities for improving 
+                            service delivery and minimizing operational pressure.
+                        </p>
+                        <div class="source-tag">Source: EDUCAUSE (2023)</div>
+                    </div>
+                </div>
+
+                <div class="context-card card-warning">
+                    <div class="context-header">
+                        <div class="context-icon">⚡</div>
+                        <h3>Proven Efficiency Gains</h3>
+                    </div>
+                    <div class="context-body">
+                        <div class="stat-highlight">
+                            <span class="stat-number">15-22%</span>
+                            <span class="stat-label">efficiency improvement</span>
+                        </div>
+                        <p>
+                            Deloitte's 2022 Human Capital Trends study found institutions using 
+                            data-driven workforce management experienced 15-22% improvements in 
+                            administrative operations through workload visibility and peak-time staffing.
+                        </p>
+                        <div class="source-tag">Source: Deloitte (2022)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Research -->
+    <section class="academic-research">
+        <div class="container">
+            <h2 class="section-title">Academic Research Findings</h2>
+            <p class="section-intro">Scholarly evidence linking workload analytics to performance improvement</p>
+
+            <div class="research-timeline">
+                <div class="research-item">
+                    <div class="research-year">2022</div>
+                    <div class="research-content">
+                        <h3>Workload Transparency & Service Quality</h3>
+                        <p class="research-authors">Anderson & Gagliardi | Journal of Higher Education Administration</p>
+                        <div class="research-findings">
+                            <h4>Key Findings:</h4>
+                            <ul>
+                                <li>Workload transparency leads to better staff-to-task fit</li>
+                                <li>Reduced service delays, especially during high-volume periods</li>
+                                <li>Improved employee satisfaction and reduced burnout</li>
+                                <li>Data-driven decisions outperform intuition-based management</li>
+                            </ul>
+                        </div>
+                        <div class="research-impact">
+                            <strong>Relevance to Silverleaf:</strong> Validates our dashboard's focus on 
+                            transparency and real-time visibility for administrators and managers.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="research-year">2023</div>
+                    <div class="research-content">
+                        <h3>Peak-Hour Analysis & Scheduling Optimization</h3>
+                        <p class="research-authors">Li & Chen | International Journal of Educational Management</p>
+                        <div class="research-findings">
+                            <h4>Key Findings:</h4>
+                            <ul>
+                                <li>Identifying peak-hour trends enables proactive scheduling</li>
+                                <li>Reduced overtime costs by 18-25% on average</li>
+                                <li>Faster turnaround times for cross-department requests</li>
+                                <li>Improved student satisfaction scores</li>
+                            </ul>
+                        </div>
+                        <div class="research-impact">
+                            <strong>Relevance to Silverleaf:</strong> Directly supports our peak-hour heatmap 
+                            feature for optimizing 9-11 AM staffing patterns.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supporting Data -->
+    <section class="supporting-data">
+        <div class="container">
+            <h2 class="section-title">Supporting Data & Benchmarks</h2>
+
+            <div class="benchmark-grid">
+                <div class="benchmark-card">
+                    <div class="benchmark-icon">⏱️</div>
+                    <h3>Processing Time Standards</h3>
+                    <div class="benchmark-comparison">
+                        <div class="benchmark-row">
+                            <span class="benchmark-label">Industry Standard:</span>
+                            <span class="benchmark-value good">35-45 minutes</span>
+                        </div>
+                        <div class="benchmark-row">
+                            <span class="benchmark-label">Silverleaf Current:</span>
+                            <span class="benchmark-value bad">48.2 minutes avg</span>
+                        </div>
+                        <div class="benchmark-row">
+                            <span class="benchmark-label">Document Verification:</span>
+                            <span class="benchmark-value critical">76 minutes</span>
+                        </div>
+                    </div>
+                    <p class="benchmark-insight">
+                        Universities handling similar volumes should target 35-45 minute cycle times. 
+                        Silverleaf exceeds this, particularly in document verification.
+                    </p>
+                </div>
+
+                <div class="benchmark-card">
+                    <div class="benchmark-icon">❌</div>
+                    <h3>Error Rate Benchmarks</h3>
+                    <div class="benchmark-comparison">
+                        <div class="benchmark-row">
+                            <span class="benchmark-label">Industry Standard:</span>
+                            <span class="benchmark-value good">&lt;15%</span>
+                        </div>
+                        <div class="benchmark-row">
+                            <span class="benchmark-label">Silverleaf Current:</span>
+                            <span class="benchmark-value critical">~53.6%</span>
+                        </div>
+                        <div class="benchmark-row">
+                            <span class="benchmark-label">Gap to Close:</span>
+                            <span class="benchmark-value">257% over target</span>
+                        </div>
+                    </div>
+                    <p class="benchmark-insight">
+                        Best-in-class institutions maintain error rates below 15%. Silverleaf's 53.6% 
+                        indicates significant quality control opportunities.
+                    </p>
+                </div>
+
+                <div class="benchmark-card">
+                    <div class="benchmark-icon">💰</div>
+                    <h3>Automation ROI Potential</h3>
+                    <div class="benchmark-comparison">
+                        <div class="benchmark-row">
+                            <span class="benchmark-label">Document Verification:</span>
+                            <span class="benchmark-value good">$74,400/year</span>
+                        </div>
+                        <div class="benchmark-row">
+                            <span class="benchmark-label">Process Optimization:</span>
+                            <span class="benchmark-value good">15-30% cost reduction</span>
+                        </div>
+                        <div class="benchmark-row">
+                            <span class="benchmark-label">Overtime Reduction:</span>
+                            <span class="benchmark-value good">18-25% savings</span>
+                        </div>
+                    </div>
+                    <p class="benchmark-insight">
+                        Automation of repetitive tasks offers immediate ROI, with document verification 
+                        alone saving $74,400 annually at Silverleaf.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="key-takeaways">
+        <div class="container">
+            <h2 class="section-title">Key Research Takeaways</h2>
+
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <div class="takeaway-number">1</div>
+                    <h3>Analytics Drive Measurable Results</h3>
+                    <p>
+                        Organizations that implement workload analytics consistently achieve 15-22% 
+                        efficiency improvements—not through guesswork, but through data-driven 
+                        insights and targeted interventions.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-number">2</div>
+                    <h3>Automation Opportunities Are Substantial</h3>
+                    <p>
+                        60-70% of administrative tasks in higher education are automatable, with 
+                        immediate high-impact targets like document verification offering quick wins 
+                        and rapid ROI.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-number">3</div>
+                    <h3>Peak-Hour Insights Enable Optimization</h3>
+                    <p>
+                        Understanding when demand peaks allows institutions to proactively schedule 
+                        staff, reduce overtime costs by 18-25%, and improve service turnaround times 
+                        significantly.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-number">4</div>
+                    <h3>Transparency Improves Performance</h3>
+                    <p>
+                        Workload visibility leads to better staff-to-task alignment, reduced burnout, 
+                        higher quality work, and improved morale—benefiting both employees and students.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-number">5</div>
+                    <h3>Silverleaf Aligns With National Trends</h3>
+                    <p>
+                        Silverleaf's challenges—high processing times, elevated error rates, peak-hour 
+                        congestion—mirror national patterns. Analytics solutions are proven effective 
+                        across institutions.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-number">6</div>
+                    <h3>Evidence-Based Solutions Work</h3>
+                    <p>
+                        Our dashboard design incorporates proven best practices from NACUBO, EDUCAUSE, 
+                        McKinsey, Deloitte, and academic research—ensuring a solution grounded in 
+                        real-world success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application to Silverleaf -->
+    <section class="application-section">
+        <div class="container">
+            <div class="application-box">
+                <h2>🎯 How This Research Informs Our Solution</h2>
+                <p class="application-intro">
+                    Every design decision in our Administrative Workload Analytics Dashboard is 
+                    backed by this research evidence:
+                </p>
+
+                <div class="application-grid">
+                    <div class="application-item">
+                        <div class="app-icon">📊</div>
+                        <h4>Real-Time KPIs</h4>
+                        <p>Based on Anderson & Gagliardi's findings that transparency improves staff-to-task fit</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="app-icon">🔥</div>
+                        <h4>Peak-Hour Heatmap</h4>
+                        <p>Directly implements Li & Chen's peak-hour optimization methodology</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="app-icon">🤖</div>
+                        <h4>Automation Recommendations</h4>
+                        <p>Targets McKinsey's 60-70% automatable tasks for maximum ROI</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="app-icon">📈</div>
+                        <h4>Efficiency Tracking</h4>
+                        <p>Aims for Deloitte's proven 15-22% efficiency improvement benchmarks</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="app-icon">👥</div>
+                        <h4>Team Performance</h4>
+                        <p>Addresses EDUCAUSE priorities for workforce analytics and optimization</p>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="app-icon">💡</div>
+                        <h4>Evidence-Based Decisions</h4>
+                        <p>Replaces intuition with data, following NACUBO best practices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <section class="content-section">
+        <div class="container">
+            <div class="navigation-buttons">
+                <a href="problem.html" class="btn btn-secondary">← Problem Context</a>
+                <a href="solution.html" class="btn btn-primary">Proposed Solution →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Team 16 - Administrative Workload Analytics Dashboard | Silverleaf University</p>
+            <p>
+                <a href="https://github.com/harshareddyetikalpadu/Team-Billikens---Manual-Administrative-Workload-Project" target="_blank" rel="noopener">GitHub Repository</a> | 
+                <a href="https://university-admin-workload-analytics.vercel.app/login" target="_blank" rel="noopener">Live Dashboard</a>
+            </p>
+        </div>
+    </footer>
+
+        <script src="js/main.js"></script>
 </body>
 </html>
